@@ -1,0 +1,13 @@
+package model;
+
+import java.io.IOException;
+
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.stage.Stage;
+
+public class CPageMover {
+	public void PageCreate(Stage stage, String FXMLRout) throws IOException {
+		Parent root = FXMLLoader.load(getClass().getResource(FXMLRout));
+	}
+}
