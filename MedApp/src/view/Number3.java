@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -17,6 +18,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import model.DBConnect;
 
@@ -50,8 +54,7 @@ public class Number3 implements Initializable {
     private Connection conn;
     private PreparedStatement pstmt;
 
-
-
+    StringBuilder strb = new StringBuilder();
     @FXML
     void ClikSreachBox(ActionEvent event) {
 
@@ -92,23 +95,39 @@ public class Number3 implements Initializable {
 
             }
     	});
-    	SearchBox.setOnKeyPressed( new EventHandler() {
+
+
+
+    	SearchListBox.setOnMouseClicked ((MouseEvent) -> {
+    		String Obj = SearchListBox.getSelectionModel().getSelectedItem();
+    		SearchBox.setText(Obj);
+    	});
+
+    	SearchBox.setOnKeyPressed( new EventHandler<KeyEvent>() {
     		@Override
-    		public void handle( Event event ) {
+    		public void handle( KeyEvent event ) {
     			conn = connection.getConnection();
-    			String sql = "SELECT *FROM student where email = ?;";
+				SearchListBox.getItems().clear();
+				if(event.getCode().equals(KeyCode.BACK_SPACE) && strb.length() != 0) {
+					strb.delete(strb.length()-1, strb.length());
+				}
+				else {
+					strb.append(event.getText());
+				}
+				if(strb.length() == 0) {
+					return;
+				}
+
+    			String sql = "SELECT email FROM student where email LIKE '" + strb.toString() +"%'" + " ORDER BY email";
 
     			try {
 					pstmt = conn.prepareStatement(sql);
-	    			pstmt.setString(1, SearchBox.getText());
 	    			ResultSet rs = pstmt.executeQuery();
 
 	    	        while(rs.next())
 	    	        {
-	    	        	SearchListBox
+	    	        	SearchListBox.getItems().add(rs.getNString("EMAIL"));
 	    	        }
-
-
 
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
