@@ -3,6 +3,7 @@ package view;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 
 import javafx.event.ActionEvent;
@@ -31,12 +32,21 @@ public class Number3 implements Initializable {
     private JFXTextField SearchBox;
 
     @FXML
+    private JFXButton Searchbtn;
+
+    @FXML
     private Text Manager;
 
     @FXML
     void ClikSreachBox(ActionEvent event) {
 
     }
+
+    @FXML
+    void onClickSearchbtn(ActionEvent event) {
+
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resoruces) { //이미지 클릭 이벤트 까지 확인
     	input.setOnMouseClicked( new EventHandler() {
