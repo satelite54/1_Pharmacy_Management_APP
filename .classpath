@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="PROJECT1/MedApp/src"/>
+	<classpathentry kind="lib" path="PROJECT1/MedApp/lib/jfoenix-8.0.10.jar"/>
+	<classpathentry kind="lib" path="PROJECT1/MedApp/lib/ojdbc6_g.jar"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="output" path="PROJECT1/MedApp/bin"/>
+</classpath>
