@@ -34,28 +34,28 @@ public class DBConnect {
 		return null;
 	}
 
-	public static void main(String[] args) {
-		DBConnect connect = new DBConnect();
-
-		Connection conn = connect.getConnection();
-		Statement stmt = null;
-		ResultSet rs = null;
-
-		String sql = "SELECT * FROM student";
-
-		try {
-			stmt = conn.createStatement();
-			rs = stmt.executeQuery(sql);
-
-			while(rs.next()) {
-				System.out.printf("%s ", rs.getNString("FULLNAME"));
-				System.out.printf("%s ", rs.getNString("EMAIL"));
-				System.out.printf("%s\n", rs.getNString("PASSWORD"));
-			}
-
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+//	public static void main(String[] args) {
+//		DBConnect connect = new DBConnect();
+//
+//		Connection conn = connect.getConnection();
+//		Statement stmt = null;
+//		ResultSet rs = null;
+//
+//		String sql = "SELECT * FROM student";
+//
+//		try {
+//			stmt = conn.createStatement();
+//			rs = stmt.executeQuery(sql);
+//
+//			while(rs.next()) {
+//				System.out.printf("%s ", rs.getNString("FULLNAME"));
+//				System.out.printf("%s ", rs.getNString("EMAIL"));
+//				System.out.printf("%s\n", rs.getNString("PASSWORD"));
+//			}
+//
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
 }
