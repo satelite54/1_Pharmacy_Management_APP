@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextField;
 
 import javafx.event.ActionEvent;
@@ -38,6 +39,9 @@ public class Number3 implements Initializable {
     private Text Manager;
 
     @FXML
+    private JFXListView<?> SearchListView;
+
+    @FXML
     void ClikSreachBox(ActionEvent event) {
 
     }
@@ -50,9 +54,9 @@ public class Number3 implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resoruces) { //이미지 클릭 이벤트 까지 확인
     	input.setOnMouseClicked( new EventHandler() {
-	               @Override
-	               public void handle( Event evnet ) {
-	                   // 원하는 실행문
+               @Override
+               public void handle( Event evnet ) {
+                   // 원하는 실행문
 
               }
         });
@@ -77,5 +81,11 @@ public class Number3 implements Initializable {
 
             }
     	});
+    	SearchBox.setOnKeyPressed( new EventHandler() {
+    		@Override
+    		public void handle( Event event ) {
+
+    		}
+		});
     }
 }
