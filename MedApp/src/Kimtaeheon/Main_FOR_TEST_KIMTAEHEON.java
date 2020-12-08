@@ -14,7 +14,7 @@ public class Main_FOR_TEST_KIMTAEHEON extends Application {
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			Parent root = fxmlLoader.load(getClass().getResource("../view/Main_KimtaeHeon.fxml"));
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("application_kimtaeheon.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
