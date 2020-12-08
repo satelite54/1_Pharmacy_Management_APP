@@ -1,7 +1,0 @@
-package model;
-
-public class CPageMover {
-	public void () {
-
-	}
-}

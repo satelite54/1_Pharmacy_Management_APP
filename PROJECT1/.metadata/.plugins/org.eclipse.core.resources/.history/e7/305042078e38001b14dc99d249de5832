@@ -1,9 +1,0 @@
-package model;
-
-import javafx.stage.Stage;
-
-public class CPageMover {
-	public void PageCreate(Stage stage, String FXMLRout) {
-
-	}
-}
