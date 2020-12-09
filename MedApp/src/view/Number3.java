@@ -115,7 +115,11 @@ public class Number3 implements Initializable {
 					strb.append(event.getText());
 				}
 				if(strb.length() == 0) {
+					SearchListBox.setDisable(true);
 					return;
+				}
+				else {
+					SearchListBox.setDisable(false);
 				}
 
     			String sql = "SELECT email FROM student where email LIKE '" + strb.toString() +"%'" + " ORDER BY email";
