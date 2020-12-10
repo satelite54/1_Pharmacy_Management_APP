@@ -2,6 +2,8 @@ package Kimtaeheon;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import model.CManagerOrViewer;
+import view.Number3;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -17,6 +19,8 @@ public class Main_FOR_TEST_KIMTAEHEON extends Application {
 			scene.getStylesheets().add(getClass().getResource("application_kimtaeheon.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
+		    CManagerOrViewer Manager = CManagerOrViewer.getInstance();
+		     Manager.ManagerOrViewer;
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

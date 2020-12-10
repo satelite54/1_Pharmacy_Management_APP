@@ -22,9 +22,13 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import model.CManagerOrViewer;
 import model.DBConnect;
 
 public class Number3 implements Initializable {
+	CManagerOrViewer MOrV = CManagerOrViewer.getInstance();
+    @FXML
+    private Text ManagerOrViewer;
 
     @FXML
     private ImageView add;
@@ -44,8 +48,6 @@ public class Number3 implements Initializable {
     @FXML
     private JFXButton Searchbtn;
 
-    @FXML
-    private Text Manager;
 
     @FXML
     private ListView<String> SearchListBox;
@@ -67,6 +69,13 @@ public class Number3 implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resoruces) { //이미지 클릭 이벤트 까지 확인
+    	if(MOrV.getManagerOrViewer() == 0) {
+    		ManagerOrViewer.setText("관리자님 안녕하세요!");
+    	}
+    	else {
+    		ManagerOrViewer.setText("열람자님 안녕하세요!");
+    	}
+
     	input.setOnMouseClicked( new EventHandler() {
                @Override
                public void handle( Event evnet ) {
@@ -95,8 +104,6 @@ public class Number3 implements Initializable {
 
             }
     	});
-
-
 
     	SearchListBox.setOnMouseClicked ((MouseEvent) -> {
     		String Obj = SearchListBox.getSelectionModel().getSelectedItem();
