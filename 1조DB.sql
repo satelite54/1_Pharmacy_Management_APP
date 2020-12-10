@@ -1,5 +1,5 @@
--- User Table
-CREATE TABLE User
+-- User Table Create SQL
+CREATE TABLE UserData
 (
     name        VARCHAR2(10)    NOT NULL, 
     id          VARCHAR2(10)    NULL, 
@@ -8,14 +8,14 @@ CREATE TABLE User
     CONSTRAINT USER_PK PRIMARY KEY (id)
 )
 
--- Medicine Table
+-- User Table Create SQL
 CREATE TABLE Medicine
 (
-    name          VARCHAR2(20)    NULL, 
+    name          VARCHAR2(20)    NOT NULL, 
     character     VARCHAR2(20)    NULL, 
     effect        VARCHAR2(20)    NULL, 
     warning       VARCHAR2(20)    NULL, 
-    company       VARCHAR2        NULL, 
+    company       VARCHAR2(20)        NULL, 
     expiration    DATE            NULL, 
     price         NUMBER          NULL, 
     CONSTRAINT MEDICINE_PK PRIMARY KEY (name)
