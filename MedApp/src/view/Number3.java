@@ -1,5 +1,6 @@
 package view;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -23,7 +24,9 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import model.CManagerOrViewer;
+import model.CPage;
 import model.DBConnect;
 
 public class Number3 implements Initializable {
@@ -59,6 +62,8 @@ public class Number3 implements Initializable {
     private PreparedStatement pstmt;
 
     StringBuilder strb = new StringBuilder();
+
+    CPage page = new CPage();
     @FXML
     void ClikSreachBox(ActionEvent event) {
 
@@ -83,28 +88,56 @@ public class Number3 implements Initializable {
                @Override
                public void handle( Event evnet ) {
                    // 원하는 실행문
-
+            	   Stage stage = new Stage();
+            	   String FXMLRout = "";
+            	   try {
+					page.CreatePage(stage, FXMLRout);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
               }
         });
     	Manage.setOnMouseClicked( new EventHandler() {
             @Override
             public void handle( Event evnet ) {
                 // 원하는 실행문
-
+         	   Stage stage = new Stage();
+         	   String FXMLRout = "";
+         	   try {
+				page.CreatePage(stage, FXMLRout);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             }
     	});
     	ShelfLife.setOnMouseClicked( new EventHandler() {
             @Override
             public void handle( Event evnet ) {
                 // 원하는 실행문
-
+         	   Stage stage = new Stage();
+         	   String FXMLRout = "";
+         	   try {
+				page.CreatePage(stage, FXMLRout);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             }
     	});
     	add.setOnMouseClicked( new EventHandler() {
             @Override
             public void handle( Event evnet ) {
                 // 원하는 실행문
-
+         	   Stage stage = new Stage();
+         	   String FXMLRout = "";
+         	   try {
+				page.CreatePage(stage, FXMLRout);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             }
     	});
 

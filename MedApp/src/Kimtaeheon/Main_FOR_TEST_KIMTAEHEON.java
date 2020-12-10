@@ -19,7 +19,6 @@ public class Main_FOR_TEST_KIMTAEHEON extends Application {
 			scene.getStylesheets().add(getClass().getResource("application_kimtaeheon.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
-		    CManagerOrViewer Manager = CManagerOrViewer.getInstance();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
