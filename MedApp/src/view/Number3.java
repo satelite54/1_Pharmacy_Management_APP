@@ -128,7 +128,7 @@ public class Number3 implements Initializable {
 					SearchListBox.setVisible(false);
 					return;
 				}
-    			String sql = "SELECT email FROM student where email LIKE '" + strb.toString() +"%'" + " ORDER BY email";
+    			String sql = "SELECT name, effect, stock FROM Medicine where name LIKE '" + strb.toString() +"%'";
 
     			try {
 					pstmt = conn.prepareStatement(sql);
@@ -137,7 +137,7 @@ public class Number3 implements Initializable {
 	    	        while(rs.next())
 	    	        {
 	    	        	SearchListBox.setVisible(true); 	//DB 검색 목록이 있다면 true
-	    	        	SearchListBox.getItems().add(rs.getNString("EMAIL"));
+	    	        	SearchListBox.getItems().add(rs.getNString("NAME") + "  " + rs.getString("EFFECT") + "  " + rs.getString("STOCK"));
 	    	        }
 
 				} catch (SQLException e) {
