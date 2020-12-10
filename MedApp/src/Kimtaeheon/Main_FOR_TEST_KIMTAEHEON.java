@@ -20,7 +20,6 @@ public class Main_FOR_TEST_KIMTAEHEON extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		    CManagerOrViewer Manager = CManagerOrViewer.getInstance();
-		     Manager.ManagerOrViewer;
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
