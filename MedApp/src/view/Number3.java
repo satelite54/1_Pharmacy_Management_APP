@@ -16,6 +16,7 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -27,8 +28,9 @@ import model.DBConnect;
 
 public class Number3 implements Initializable {
 	CManagerOrViewer MOrV = CManagerOrViewer.getInstance();
+
     @FXML
-    private Text ManagerOrViewer;
+    private Label ManagerOrViewer;
 
     @FXML
     private ImageView add;
@@ -69,6 +71,7 @@ public class Number3 implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resoruces) { //이미지 클릭 이벤트 까지 확인
+    	SearchListBox.setVisible(false);
     	if(MOrV.getManagerOrViewer() == 0) {
     		ManagerOrViewer.setText("관리자님 안녕하세요!");
     	}
@@ -122,13 +125,9 @@ public class Number3 implements Initializable {
 					strb.append(event.getText());
 				}
 				if(strb.length() == 0) {
-					SearchListBox.setDisable(true);
+					SearchListBox.setVisible(false);
 					return;
 				}
-				else {
-					SearchListBox.setDisable(false);
-				}
-
     			String sql = "SELECT email FROM student where email LIKE '" + strb.toString() +"%'" + " ORDER BY email";
 
     			try {
@@ -137,6 +136,7 @@ public class Number3 implements Initializable {
 
 	    	        while(rs.next())
 	    	        {
+	    	        	SearchListBox.setVisible(true); 	//DB 검색 목록이 있다면 true
 	    	        	SearchListBox.getItems().add(rs.getNString("EMAIL"));
 	    	        }
 
