@@ -129,7 +129,7 @@ public class Number3 implements Initializable {
             public void handle( Event evnet ) {
                 // 원하는 실행문
          	   Stage stage = new Stage();
-         	   String FXMLRout = "";
+         	   String FXMLRout = "../view/SignUp.fxml";
          	   try {
 				page.CreatePage(stage, FXMLRout);
 			} catch (IOException e) {
