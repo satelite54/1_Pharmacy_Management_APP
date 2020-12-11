@@ -77,7 +77,7 @@ public class Number3 implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resoruces) { //이미지 클릭 이벤트 까지 확인
     	SearchListBox.setVisible(false);
-    	if(MOrV.getManagerOrViewer() == 0) {
+    	if(MOrV.getManagerOrViewer() == 1) {
     		ManagerOrViewer.setText("관리자님 안녕하세요!");
     	}
     	else {
