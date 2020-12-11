@@ -18,7 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import model.CManagerOrViewer;
+import model.CSingelton;
 import model.DBConnect;
 
 public class LoginController {
@@ -44,16 +44,15 @@ public class LoginController {
     PreparedStatement pstmt;
     ResultSet rs;
 
-    CManagerOrViewer mov = CManagerOrViewer.getInstance();
     @FXML
     void createLogin(ActionEvent event) throws SQLException, IOException {
+        CSingelton mov = CSingelton.getInstance();
     	//System.out.println("로그인 페이지로");
     	/*if(tfEmail.getText().equals("")) {
     		mgs.setMessage("이름 미입력!");    	}*/
     	//DB에 이메일과 비밀번호를 확인하여 로그인 가능 또는 불가
-    	conn = connect.getConnection();
     	String sql = "SELECT*FROM userdata WHERE id=? AND password=?";
-    	pstmt = conn.prepareStatement(sql);
+    	pstmt = mov.getDBConnect().prepareStatement(sql);
     	pstmt.setNString(1,  tfEmail.getText());
     	pstmt.setNString(2,  tfPass.getText());
 

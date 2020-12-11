@@ -20,7 +20,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import model.DBConnect;
+import model.CSingelton;
 
 public class SignUpController implements Initializable {
 
@@ -45,8 +45,8 @@ public class SignUpController implements Initializable {
     private JFXButton login;
 
     Message msg = new Message();
-    DBConnect connect = new DBConnect();
-    Connection conn;
+
+    CSingelton mov = CSingelton.getInstance();
 
     @FXML
     void goLogin(ActionEvent event) throws IOException {
@@ -78,9 +78,8 @@ public class SignUpController implements Initializable {
     			msg.setMessage("패스워드를 입력해 주세요!");
     			return;
     		}
-    		conn = connect.getConnection();
     		String sql = "INSERT INTO userdata Values(?, ?, ?, ?)";
-    		PreparedStatement pstmt = conn.prepareStatement(sql); //sql문을 준비
+    		PreparedStatement pstmt = mov.getDBConnect().prepareStatement(sql); //sql문을 준비
     		pstmt.setNString(1,  fullname.getText());
     		pstmt.setNString(2,  email.getText());
     		pstmt.setNString(3,  password.getText());
@@ -104,9 +103,8 @@ public class SignUpController implements Initializable {
     			msg.setMessage("패스워드를 입력해 주세요!");
     			return;
     		}
-    		conn = connect.getConnection();
     		String sql = "INSERT INTO userdata Values(?, ?, ?, ?)";
-    		PreparedStatement pstmt = conn.prepareStatement(sql); //sql문을 준비
+    		PreparedStatement pstmt = mov.getDBConnect().prepareStatement(sql); //sql문을 준비
 
     		pstmt.setNString(1,  fullname.getText());
     		pstmt.setNString(2,  email.getText());

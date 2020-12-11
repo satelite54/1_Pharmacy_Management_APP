@@ -50,7 +50,7 @@ public class HomePageController {
 		ObservableList<Team01> stList = FXCollections.observableArrayList();
 
 		//쿼리문 작성
-		String sql = "SELECT * FROM  Team01";
+		String sql = "SELECT * FROM  userdatas";
 		//DB 연결
 		Connection conn = connection.getConnection();
 		Statement stmt;          //DB에 보낼 쿼리 객체

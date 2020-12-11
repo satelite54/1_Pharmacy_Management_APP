@@ -2,7 +2,7 @@ package Kimtaeheon;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import model.CManagerOrViewer;
+import model.CSingelton;
 import view.Number3;
 import javafx.scene.Parent;
 import javafx.scene.Scene;

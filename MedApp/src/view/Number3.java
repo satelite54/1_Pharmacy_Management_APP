@@ -25,12 +25,12 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import model.CManagerOrViewer;
+import model.CSingelton;
 import model.CPage;
 import model.DBConnect;
 
 public class Number3 implements Initializable {
-	CManagerOrViewer MOrV = CManagerOrViewer.getInstance();
+	CSingelton MOrV = CSingelton.getInstance();
 
     @FXML
     private Label ManagerOrViewer;
@@ -57,8 +57,6 @@ public class Number3 implements Initializable {
     @FXML
     private ListView<String> SearchListBox;
 
-    DBConnect connection= new DBConnect();
-    private Connection conn;
     private PreparedStatement pstmt;
 
     StringBuilder strb = new StringBuilder();
@@ -149,7 +147,6 @@ public class Number3 implements Initializable {
     	SearchBox.setOnKeyPressed( new EventHandler<KeyEvent>() {
     		@Override
     		public void handle( KeyEvent event ) {
-    			conn = connection.getConnection();
 				SearchListBox.getItems().clear();
 				if(event.getCode().equals(KeyCode.BACK_SPACE) && strb.length() != 0) {
 					strb.delete(strb.length()-1, strb.length());
@@ -164,7 +161,7 @@ public class Number3 implements Initializable {
     			String sql = "SELECT name, effect, stock FROM Medicine where name LIKE '" + strb.toString() +"%'";
 
     			try {
-					pstmt = conn.prepareStatement(sql);
+					pstmt = MOrV.getDBConnect().prepareStatement(sql);
 	    			ResultSet rs = pstmt.executeQuery();
 
 	    	        while(rs.next())
