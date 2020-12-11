@@ -83,7 +83,7 @@ public class Number3 implements Initializable {
                public void handle( Event evnet ) {
                    // 원하는 실행문
             	   Stage stage = new Stage();
-            	   String FXMLRout = "";
+            	   String FXMLRout = "../view/DBRegister.fxml";
             	   try {
 					page.CreatePage(stage, FXMLRout);
 				} catch (IOException e) {
@@ -111,7 +111,7 @@ public class Number3 implements Initializable {
             public void handle( Event evnet ) {
                 // 원하는 실행문
          	   Stage stage = new Stage();
-         	   String FXMLRout = "";
+         	   String FXMLRout = "../view/Mdate.fxml";
          	   try {
 				page.CreatePage(stage, FXMLRout);
 			} catch (IOException e) {
