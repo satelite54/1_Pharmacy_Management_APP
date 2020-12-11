@@ -57,6 +57,8 @@ public class DBRegisterController implements Initializable{
     @FXML
     private Label mov;
 
+    String path = DBRegisterController.class.getResource("").getPath();
+    // 현재 클래스의 절대 경로를 가져온다. // 2020 12 11 김태헌
 	Message msg = new Message();
 	CSingelton MOrV = CSingelton.getInstance();
 	@Override
@@ -70,7 +72,7 @@ public class DBRegisterController implements Initializable{
 	public void fileChoose() {
 		FileChooser fChooser = new FileChooser();
 		fChooser.setTitle("");
-		fChooser.setInitialDirectory(new File("../img/"));
+		fChooser.setInitialDirectory(new File(path));
 		ExtensionFilter imgType = new ExtensionFilter("image file", "*.jpg", "*.gif", "*.png");
 		fChooser.getExtensionFilters().add(imgType);
 		ExtensionFilter txtType = new ExtensionFilter("text file", "*.txt", "*.doc");
