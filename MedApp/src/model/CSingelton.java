@@ -11,11 +11,13 @@ public class CSingelton {
 	// 2020 12 10 김태헌
 	private static Connection conn;
 	private static DBConnect connect = new DBConnect();
+	private static String strSearchText = "";
 	// 싱글톤 클래스에서 DB 커넥트 담당
 	// 한번 연결하면 계속 연결된 상태 유지할 수 있게
 	// 2020 12 11 김태헌
 	public static CSingelton getInstance() {
 		if(printer == null) {
+
 			conn = connect.getConnection();
 			//최초 싱글톤 객체 생성될 떄 DB 연결
 			printer = new CSingelton();
@@ -32,5 +34,11 @@ public class CSingelton {
 
 	public Connection getDBConnect() {
 		return conn;
+	}
+	public void setSearchText(String text) {
+		strSearchText = text;
+	}
+	public String getSearchText() {
+		return strSearchText;
 	}
 }

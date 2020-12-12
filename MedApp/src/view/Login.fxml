@@ -30,11 +30,6 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </JFXPasswordField>
-            <JFXButton fx:id="btnRegister" layoutX="132.0" layoutY="470.0" onAction="#createregister" prefHeight="60.0" prefWidth="267.0" style="-fx-background-color: 2D3B55; -fx-border-radius: 10px;" text="REGISTER" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </JFXButton>
             <JFXButton fx:id="btnLogin" layoutX="132.0" layoutY="381.0" onAction="#createLogin" prefHeight="60.0" prefWidth="267.0" text="LOGIN" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />

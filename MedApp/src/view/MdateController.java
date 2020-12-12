@@ -9,9 +9,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
+import com.jfoenix.controls.JFXButton;
+
 import model.Medicine;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -29,6 +32,8 @@ public class MdateController implements Initializable{
  private TableColumn<Medicine, String> colName;
  @FXML
  private TableColumn<Medicine, Date> colExpiration;
+ @FXML
+ private JFXButton btnHome;
 
  CSingelton mov = CSingelton.getInstance();
 
@@ -61,5 +66,9 @@ public class MdateController implements Initializable{
 		@Override
 		public void initialize(URL location, ResourceBundle resources) {
 			showMedicine();
-}
+		}
+	    @FXML
+	    void handleButton(ActionEvent event) {
+	    	btnHome.getScene().getWindow().hide();
+	    }
 }

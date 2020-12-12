@@ -94,7 +94,7 @@ public class DBRegisterController implements Initializable{
 	 @FXML
 	    void register(ActionEvent event) throws SQLException{
 	    		//DB로 입력내용을 저장->Insert into
-	    	if(""/*권한있는경우*/ != null) {
+	    	if(MOrV.getManagerOrViewer() == 1) {
 	    		//권한이 있는 경우
 	    		String sql = "INSERT INTO medicine Values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	    		PreparedStatement pstmt = MOrV.getDBConnect().prepareStatement(sql);
@@ -105,17 +105,17 @@ public class DBRegisterController implements Initializable{
 	    		pstmt.setNString(5,  warning.getText());
 	    		pstmt.setNString(6,  company.getText());
 	    		pstmt.setDate(7, Date.valueOf(expiration.getValue()));
-	    		pstmt.setNString(8,  price.getText());
-	    		pstmt.setNString(9,  stock.getText());
+	    		pstmt.setLong(8,  Integer.parseInt(price.getText()));
+	    		pstmt.setLong(9,  Integer.parseInt(stock.getText()));
 
 	    		pstmt.executeUpdate();
 
 	    		msg.setMessage("입력성공");
 
 	    	}
-	    	//else {//권한이 없는 경우
-	    	//	msg.setMessage("등록 권한이 없습니다.");
-	    	//}
+	    	else {//권한이 없는 경우
+	    		msg.setMessage("등록 권한이 없습니다.");
+	    	}
 	    }
 	 /*이미지가져오기*/
 	 public class CustomImage{

@@ -65,7 +65,16 @@ public class Number3 implements Initializable {
 
     @FXML
     void onClickSearchbtn(ActionEvent event) {
-
+        // 원하는 실행문
+ 	   MOrV.setSearchText(SearchBox.getText());
+    	Stage stage = new Stage();
+ 	   String FXMLRout = "../view/DBSearch.fxml";
+ 	   try {
+			page.CreatePage(stage, FXMLRout);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
     @Override
@@ -97,7 +106,7 @@ public class Number3 implements Initializable {
             public void handle( Event evnet ) {
                 // 원하는 실행문
          	   Stage stage = new Stage();
-         	   String FXMLRout = "";
+         	   String FXMLRout = "../view/DBSearch.fxml";
          	   try {
 				page.CreatePage(stage, FXMLRout);
 			} catch (IOException e) {
