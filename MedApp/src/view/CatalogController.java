@@ -24,7 +24,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.DBConnect;
 import model.Medicine;
-import oracle.net.aso.l;
 import model.CPage;
 
 public class CatalogController implements Initializable {

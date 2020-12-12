@@ -12,7 +12,6 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -87,62 +86,50 @@ public class Number3 implements Initializable {
     		ManagerOrViewer.setText("열람자님 안녕하세요!");
     	}
 
-    	input.setOnMouseClicked( new EventHandler() {
-               @Override
-               public void handle( Event evnet ) {
-                   // 원하는 실행문
-            	   Stage stage = new Stage();
-            	   String FXMLRout = "../view/DBRegister.fxml";
-            	   try {
-					page.CreatePage(stage, FXMLRout);
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-              }
-        });
-    	Manage.setOnMouseClicked( new EventHandler() {
-            @Override
-            public void handle( Event evnet ) {
-                // 원하는 실행문
-         	   Stage stage = new Stage();
-         	   String FXMLRout = "../view/DBSearch.fxml";
-         	   try {
+    	input.setOnMouseClicked( evnet -> {
+		       // 원하는 실행문
+			   Stage stage = new Stage();
+			   String FXMLRout = "../view/DBRegister.fxml";
+			   try {
 				page.CreatePage(stage, FXMLRout);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-            }
-    	});
-    	ShelfLife.setOnMouseClicked( new EventHandler() {
-            @Override
-            public void handle( Event evnet ) {
-                // 원하는 실행문
-         	   Stage stage = new Stage();
-         	   String FXMLRout = "../view/Mdate.fxml";
-         	   try {
-				page.CreatePage(stage, FXMLRout);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-            }
-    	});
-    	add.setOnMouseClicked( new EventHandler() {
-            @Override
-            public void handle( Event evnet ) {
-                // 원하는 실행문
-         	   Stage stage = new Stage();
-         	   String FXMLRout = "../view/SignUp.fxml";
-         	   try {
-				page.CreatePage(stage, FXMLRout);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-            }
-    	});
+		  });
+    	Manage.setOnMouseClicked( evnet -> {
+		    // 원하는 실행문
+		   Stage stage = new Stage();
+		   String FXMLRout = "../view/DBSearch.fxml";
+		   try {
+			page.CreatePage(stage, FXMLRout);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		});
+    	ShelfLife.setOnMouseClicked( evnet -> {
+		    // 원하는 실행문
+		   Stage stage = new Stage();
+		   String FXMLRout = "../view/Mdate.fxml";
+		   try {
+			page.CreatePage(stage, FXMLRout);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		});
+    	add.setOnMouseClicked( evnet -> {
+		    // 원하는 실행문
+		   Stage stage = new Stage();
+		   String FXMLRout = "../view/SignUp.fxml";
+		   try {
+			page.CreatePage(stage, FXMLRout);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		});
 
     	SearchListBox.setOnMouseClicked ((MouseEvent) -> {
     		String Obj = SearchListBox.getSelectionModel().getSelectedItem();
