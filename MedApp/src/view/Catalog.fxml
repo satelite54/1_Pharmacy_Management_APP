@@ -27,7 +27,6 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Label fx:id="CatalogManager" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="231.0" style="-fx-background-color: #821d1d;" text="관리자 | 열람자" textAlignment="CENTER" textFill="WHITE" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="451.0" layoutY="45.0" prefHeight="61.0" prefWidth="379.0" text="DB 목록" textAlignment="CENTER" textFill="#465b68" textOverrun="CENTER_ELLIPSIS">
          <font>
             <Font size="37.0" />
@@ -55,6 +54,7 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <Label fx:id="label1" layoutX="21.0" layoutY="123.0" text="Label" />
+      <Label fx:id="label1" visible="false" layoutX="21.0" layoutY="123.0" text="Label" />
+      <Label fx:id="ManagerOrViewer" layoutX="24.0" layoutY="24.0" prefHeight="22.0" prefWidth="175.0" />
    </children>
 </AnchorPane>

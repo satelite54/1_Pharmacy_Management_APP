@@ -13,6 +13,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -28,6 +29,9 @@ public class DBSearchController implements Initializable {
 	private PreparedStatement pstmt;
 	private ObservableList<Medicine> data;
 	private MedAppDao MedDao = new MedAppDao();
+
+	@FXML
+	private Label ManagerOrViewer;
 
     @FXML
     private Rectangle dbSearchRectangle;
@@ -76,11 +80,19 @@ public class DBSearchController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
+    	if(Singelotn.getManagerOrViewer() == 1) {
+    		ManagerOrViewer.setText("로그인 정보 : 관리자");
+    	}
+    	else {
+    		ManagerOrViewer.setText("로그인 정보 : 열람자");
+    	}
+
 		if(Singelotn.getSearchText().equals(""))
 			return;
 		else {
 			try {
 				MedicineTableSet(Singelotn.getSearchText());
+				textField.setText(Singelotn.getSearchText());
 			} catch (Exception e) {
 	        	e.printStackTrace();
 	        	System.out.println("Error on Building Data");

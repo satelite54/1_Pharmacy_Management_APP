@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import com.sun.javafx.image.impl.ByteIndexed.Getter;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -57,6 +58,7 @@ public class Number3 implements Initializable {
     StringBuilder strb = new StringBuilder();
 
     CPage page = new CPage();
+
     @FXML
     void ClikSreachBox(ActionEvent event) {
 
@@ -79,11 +81,14 @@ public class Number3 implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resoruces) { //이미지 클릭 이벤트 까지 확인
     	SearchListBox.setVisible(false);
+    	SearchListBox.setFocusTraversable(false);
+    	Searchbtn.setFocusTraversable(false);
+    	//검색창에서 탭키를 누를 시 다른 컴포넌트로 넘어가는 것을 방지
     	if(MOrV.getManagerOrViewer() == 1) {
-    		ManagerOrViewer.setText("관리자님 안녕하세요!");
+    		ManagerOrViewer.setText("로그인 정보 : 관리자");
     	}
     	else {
-    		ManagerOrViewer.setText("열람자님 안녕하세요!");
+    		ManagerOrViewer.setText("로그인 정보 : 열람자");
     	}
 
     	input.setOnMouseClicked( evnet -> {
@@ -132,19 +137,46 @@ public class Number3 implements Initializable {
 		});
 
     	SearchListBox.setOnMouseClicked ((MouseEvent) -> {
-    		String Obj = SearchListBox.getSelectionModel().getSelectedItem();
-    		SearchBox.setText(Obj);
+    		if(MouseEvent.getClickCount() == 2) {
+    			MOrV.setSearchText(SearchBox.getText());
+    			Stage stage = new Stage();
+    	  	   String FXMLRout = "../view/DBSearch.fxml";
+    	  	   try {
+    	 			page.CreatePage(stage, FXMLRout);
+    	 		} catch (IOException e) {
+    	 			// TODO Auto-generated catch block
+    	 			e.printStackTrace();
+    	 		}
+    		}
     	});
 
     	SearchBox.setOnKeyPressed( new EventHandler<KeyEvent>() {
     		@Override
     		public void handle( KeyEvent event ) {
 				SearchListBox.getItems().clear();
+				if(event.getCode().equals(KeyCode.ENTER)) {
+			 	   MOrV.setSearchText(SearchBox.getText());
+			    	Stage stage = new Stage();
+			 	   String FXMLRout = "../view/DBSearch.fxml";
+			 	   try {
+						page.CreatePage(stage, FXMLRout);
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+
+				if(event.getCode().equals(KeyCode.TAB)) {
+					SearchBox.setText(MOrV.getSearchText());
+					strb.setLength(0);
+					strb.append(SearchBox.getText());
+				}
 				if(event.getCode().equals(KeyCode.BACK_SPACE) && strb.length() != 0) {
-					strb.delete(strb.length()-1, strb.length());
+					strb.delete(strb.length() - 1, strb.length() + 1);
 				}
 				else {
-					strb.append(event.getText());
+					if(!event.getCode().equals(KeyCode.TAB) || !event.getCode().equals(KeyCode.ENTER))
+						strb.append(event.getText());
 				}
 				if(strb.length() == 0) {
 					SearchListBox.setVisible(false);
@@ -160,8 +192,13 @@ public class Number3 implements Initializable {
 	    	        {
 	    	        	SearchListBox.setVisible(true); 	//DB 검색 목록이 있다면 true
 	    	        	SearchListBox.getItems().add(rs.getNString("NAME") + "  " + rs.getString("EFFECT") + "  " + rs.getString("STOCK"));
+	    	        	if(MOrV.getSearchText().equals("")) {
+		    	        	MOrV.setSearchText(rs.getNString("NAME"));
+	    	        	}
+	    	        	if(MOrV.getSearchText().length() < rs.getNString("NAME").length()) {
+		    	        	MOrV.setSearchText(rs.getNString("NAME"));
+	    	        	}
 	    	        }
-
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

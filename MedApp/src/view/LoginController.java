@@ -64,10 +64,9 @@ public class LoginController {
     		//현재 창을 닫는다.
     		if(tfEmail.getText().equals(rs.getNString("id")) &&
     				tfPass.getText().equals(rs.getNString("PASSWORD"))) {
-    			if(rs.getNString("permit").equals("permit 001")) {
+    			if(rs.getNString("permit").equals("관리자")) {
     				mov.setManagerOrViewer(1);
     			}
-        		msg.setMessage("Success!");
         		LoginSucess = true;
     		}
     		if(LoginSucess == true) {
@@ -78,6 +77,7 @@ public class LoginController {
         		Scene scene = new Scene(root);
         		home.setScene(scene);
         		home.show();
+        		msg.setMessage("Success!");
     		}
     	}
     	else {

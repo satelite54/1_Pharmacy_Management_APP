@@ -19,10 +19,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import model.CSingelton;
 
 public class SignUpController implements Initializable {
+
+	@FXML
+	private Label ManagerOrViewer;
 
     @FXML
     private JFXTextField fullname;
@@ -113,13 +117,19 @@ public class SignUpController implements Initializable {
 
     		pstmt.executeUpdate();//준비된 쿼리문을 DB에 접속해서 실행
 
-    		msg.setMessage("게스트로 등록 되셨습니다.");
+    		msg.setMessage("열람자로 등록 되셨습니다.");
     	}
     }
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// 초기 상태값을 설정
+		if(mov.getManagerOrViewer() == 1) {
+			ManagerOrViewer.setText("로그인 정보 관리자");
+		} else {
+			msg.setMessage("권한없음!");
+			fullname.getScene().getWindow().hide();
+		}
 		fullname.setStyle("-fx-text-inner-color:#afbccd;");
 		email.setStyle("-fx-text-inner-color:#afbccd;");
 		password.setStyle("-fx-text-inner-color:#afbccd;");

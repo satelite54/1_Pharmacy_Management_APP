@@ -28,6 +28,9 @@ import model.DBConnect;
 
 public class DBRegisterController implements Initializable{
 	@FXML
+	private Label ManagerOrViewer;
+
+	@FXML
 	private AnchorPane anPane;
 	@FXML
     private JFXTextField name;
@@ -64,9 +67,9 @@ public class DBRegisterController implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		if(MOrV.getManagerOrViewer() == 1) {
-			mov.setText("관리자");
+			mov.setText("로그인 정보 : 관리자");
 		} else {
-			mov.setText("로그인정보 | 열람자");
+			mov.setText("로그인 정보 : 열람자");
 		}
 	}
 	public void fileChoose() {

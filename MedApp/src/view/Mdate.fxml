@@ -28,7 +28,7 @@
           <TableColumn fx:id="colExpiration" prefWidth="174.0" text="유통기한" />
         </columns>
       </TableView>
-      <Label layoutX="25.0" layoutY="21.0" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #ab6e6e;" />
       <JFXButton fx:id="btnHome" layoutX="572.0" layoutY="881.0" onAction="#handleButton" prefHeight="44.0" prefWidth="137.0" text="나가기" />
+      <Label fx:id="ManagerOrViewer" layoutX="24.0" layoutY="24.0" prefHeight="22.0" prefWidth="175.0" />
    </children>
 </AnchorPane>

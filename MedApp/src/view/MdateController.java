@@ -1,11 +1,8 @@
 package view;
 
 import java.net.URL;
-import java.sql.Connection;
 import java.sql.Date;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
@@ -24,6 +21,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import model.CSingelton;
 
 public class MdateController implements Initializable{
+@FXML
+private Label ManagerOrViewer;
  @FXML
  private Label label;
  @FXML
@@ -65,6 +64,12 @@ public class MdateController implements Initializable{
 
 		@Override
 		public void initialize(URL location, ResourceBundle resources) {
+			if(mov.getManagerOrViewer() == 1) {
+	    		ManagerOrViewer.setText("로그인 정보 : 관리자");
+	    	}
+	    	else {
+	    		ManagerOrViewer.setText("로그인 정보 : 열람자");
+	    	}
 			showMedicine();
 		}
 	    @FXML

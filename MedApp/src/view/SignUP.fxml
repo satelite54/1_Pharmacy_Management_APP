@@ -104,5 +104,6 @@
             <Image url="@../img/png01.png" />
          </image>
       </ImageView>
+      <Label fx:id="ManagerOrViewer" layoutX="12.0" layoutY="81.0" prefHeight="22.0" prefWidth="175.0" />
    </children>
 </AnchorPane>

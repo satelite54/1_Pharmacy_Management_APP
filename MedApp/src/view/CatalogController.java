@@ -25,8 +25,12 @@ import javafx.stage.Stage;
 import model.DBConnect;
 import model.Medicine;
 import model.CPage;
+import model.CSingelton;
 
 public class CatalogController implements Initializable {
+	@FXML
+	private Label ManagerOrViewer;
+
 	@FXML
 	private TableView<Medicine> tbCatalog;
 	@FXML
@@ -58,6 +62,8 @@ public class CatalogController implements Initializable {
 	@FXML
 	private Button goExpirition;
 
+	CSingelton mov = CSingelton.getInstance();
+
     @FXML
     private Label label1;
 
@@ -82,6 +88,12 @@ public class CatalogController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		if(mov.getManagerOrViewer() == 1) {
+			ManagerOrViewer.setText("로그인 정보 : 관리자");
+		}
+		else {
+			ManagerOrViewer.setText("로그인 정보 : 열람자");
+		}
 		showMedicine();
 		tbCatalog.getSelectionModel().selectedItemProperty().addListener(
 				// 테이블 안의 내용중 행이 하나의 Book객체이고 다른 행을 선택(마우스 클릭시)
