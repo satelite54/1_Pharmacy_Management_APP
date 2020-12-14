@@ -28,7 +28,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnHome" layoutX="636.0" layoutY="903.0" prefHeight="54.0" prefWidth="167.0" style="-fx-background-color: #ebecf1;" text="나가기" textFill="#206a5d">
+      <JFXButton fx:id="btnHome" layoutX="636.0" layoutY="903.0" onAction="#Exit" prefHeight="54.0" prefWidth="167.0" style="-fx-background-color: #ebecf1;" text="나가기" textFill="#206a5d">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>

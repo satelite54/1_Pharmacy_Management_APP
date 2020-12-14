@@ -39,7 +39,7 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="CExit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" text="나가기">
+            <Button fx:id="CExit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Exit" prefHeight="35.0" text="나가기">
                <font>
                   <Font size="16.0" />
                </font>
@@ -54,7 +54,7 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <Label fx:id="label1" visible="false" layoutX="21.0" layoutY="123.0" text="Label" />
+      <Label fx:id="label1" layoutX="21.0" layoutY="123.0" text="Label" visible="false" />
       <Label fx:id="ManagerOrViewer" layoutX="24.0" layoutY="24.0" prefHeight="22.0" prefWidth="175.0" />
    </children>
 </AnchorPane>

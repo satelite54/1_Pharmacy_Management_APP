@@ -64,6 +64,12 @@ public class DBRegisterController implements Initializable{
     // 현재 클래스의 절대 경로를 가져온다. // 2020 12 11 김태헌
 	Message msg = new Message();
 	CSingelton MOrV = CSingelton.getInstance();
+
+    @FXML
+    void Exit(ActionEvent event) {
+    	btnFChooser.getScene().getWindow().hide();
+    }
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		if(MOrV.getManagerOrViewer() == 1) {
@@ -82,6 +88,9 @@ public class DBRegisterController implements Initializable{
 		fChooser.getExtensionFilters().addAll(imgType, txtType);
 
 		File selectedFile = fChooser.showOpenDialog(null);
+
+		path = initImage(selectedFile);
+
 		System.out.println(selectedFile);
 		try {
 			FileInputStream fis = new FileInputStream(selectedFile);
@@ -102,7 +111,7 @@ public class DBRegisterController implements Initializable{
 	    		String sql = "INSERT INTO medicine Values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	    		PreparedStatement pstmt = MOrV.getDBConnect().prepareStatement(sql);
 	    		pstmt.setNString(1,  name.getText());
-	    		pstmt.setNString(2,  "");  //.getText()사용
+	    		pstmt.setNString(2,  path);
 	    		pstmt.setNString(3,  character.getText());
 	    		pstmt.setNString(4,  effect.getText());
 	    		pstmt.setNString(5,  warning.getText());
@@ -137,7 +146,8 @@ public class DBRegisterController implements Initializable{
 		 String str = imageFile.toURI().toString(); //resource 폴더에서 불러오는 방법
 		 return str;
 	 }
-}
 
+
+}
 
 
