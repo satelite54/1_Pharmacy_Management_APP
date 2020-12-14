@@ -12,13 +12,13 @@
 
 <AnchorPane prefHeight="1024.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.DBSearchController">
    <children>
-      <Rectangle fx:id="dbSearchRectangle" arcHeight="5.0" arcWidth="5.0" fill="#c5cbeb" height="84.0" layoutX="540.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" width="381.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="449.0" />
-      <JFXButton fx:id="searchButton" layoutX="877.0" layoutY="183.0" onAction="#handleSearch" prefHeight="71.0" prefWidth="143.0" ripplerFill="#a5d9e1" style="-fx-border-color: black; -fx-background-color: #a5d9e1;" text="검색" textFill="#889bb5" AnchorPane.rightAnchor="250.0">
+      <Rectangle fx:id="dbSearchRectangle" arcHeight="5.0" arcWidth="5.0" fill="#206a5d" height="84.0" layoutX="540.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-background-color: #206a5d;" width="381.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="449.0" />
+      <JFXButton fx:id="searchButton" layoutX="877.0" layoutY="183.0" onAction="#handleSearch" prefHeight="71.0" prefWidth="143.0" ripplerFill="#a5d9e1" style="-fx-background-color: #206a5d;" text="검색" textFill="WHITE" AnchorPane.rightAnchor="250.0">
          <font>
             <Font size="32.0" />
          </font>
       </JFXButton>
-      <Text fx:id="titleText" fill="#2075f5" layoutX="582.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DB 검색">
+      <Text fx:id="titleText" fill="WHITE" layoutX="582.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DB 검색">
          <font>
             <Font size="32.0" />
          </font>
@@ -35,12 +35,12 @@
             <TableColumn fx:id="colStock" prefWidth="71.0" text="재고" />
          </columns>
       </TableView>
-      <JFXButton fx:id="btnHome" layoutX="613.0" layoutY="806.0" onAction="#handlebtn" prefHeight="71.0" prefWidth="55.0" style="-fx-border-color: black; -fx-background-color: #c5cbeb;" text="나가기" textFill="#2075f5" AnchorPane.leftAnchor="550.0" AnchorPane.rightAnchor="550.0">
+      <JFXButton fx:id="btnHome" layoutX="613.0" layoutY="806.0" onAction="#handlebtn" prefHeight="71.0" prefWidth="55.0" style="-fx-background-color: #206a5d;" text="나가기" textFill="WHITE" AnchorPane.leftAnchor="550.0" AnchorPane.rightAnchor="550.0">
          <font>
             <Font size="33.0" />
          </font>
       </JFXButton>
-      <JFXTextField fx:id="textField" layoutX="285.0" layoutY="183.0" prefHeight="71.0" prefWidth="603.0" />
+      <JFXTextField fx:id="textField" focusColor="#206a5d" layoutX="285.0" layoutY="183.0" prefHeight="71.0" prefWidth="603.0" />
       <Label fx:id="ManagerOrViewer" layoutX="24.0" layoutY="24.0" prefHeight="22.0" prefWidth="175.0" />
    </children>
 </AnchorPane>
