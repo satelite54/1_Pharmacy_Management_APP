@@ -183,7 +183,7 @@ public class CatalogController implements Initializable {
     	try {
     		pstmt = connect.prepareStatement(sql);
 
-    		pstmt.setText(1, label1.getText()); // ID == 숫자
+    		pstmt.setNString(1, label1.getText()); // ID == 숫자
 
     		// 입력 준비 됨.
     		pstmt.executeUpdate(); // 리턴 값이 없을 경우에 업데이트
