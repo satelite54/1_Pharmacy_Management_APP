@@ -11,11 +11,6 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MdateController">
    <children>
-      <Label fx:id="Today" alignment="CENTER" contentDisplay="CENTER" layoutX="491.0" layoutY="119.0" prefHeight="59.0" prefWidth="298.0" style="-fx-background-color: #ab6e6e;" textAlignment="CENTER" textFill="#ab6e6e">
-         <font>
-            <Font size="31.0" />
-         </font>
-      </Label>
       <Rectangle fx:id="title" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="75.0" layoutX="497.0" layoutY="34.0" stroke="BLACK" strokeType="INSIDE" width="286.0" />
       <Text fx:id="titleText" layoutX="542.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="유통기한 임박 재고">
          <font>
@@ -30,5 +25,6 @@
       </TableView>
       <JFXButton fx:id="btnHome" layoutX="572.0" layoutY="881.0" onAction="#handleButton" prefHeight="44.0" prefWidth="137.0" text="나가기" />
       <Label fx:id="ManagerOrViewer" layoutX="24.0" layoutY="24.0" prefHeight="22.0" prefWidth="175.0" />
+      <Label fx:id="Today" alignment="CENTER" layoutX="516.0" layoutY="129.0" prefHeight="55.0" prefWidth="249.0" text="현재시간" />
    </children>
 </AnchorPane>
