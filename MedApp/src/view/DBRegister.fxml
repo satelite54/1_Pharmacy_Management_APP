@@ -18,102 +18,102 @@
             <Image url="@../img/default.jpg" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="494.0" layoutY="179.0" prefHeight="37.0" prefWidth="232.0" style="-fx-background-color: #ebecf1;" text="DB등록" textFill="#206a5d">
+      <Label alignment="CENTER" layoutX="494.0" layoutY="179.0" prefHeight="37.0" prefWidth="232.0" text="DB등록" textFill="#206a5d">
          <font>
             <Font name="System Bold" size="50.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btnRegister" layoutX="418.0" layoutY="903.0" onAction="#register" prefHeight="54.0" prefWidth="167.0" style="-fx-background-color: #ebecf1;" text="등록하기" textFill="#206a5d">
+      <JFXButton fx:id="btnRegister" layoutX="418.0" layoutY="903.0" onAction="#register" prefHeight="54.0" prefWidth="167.0" style="-fx-background-color: #206a5d;" text="등록하기" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnHome" layoutX="636.0" layoutY="903.0" onAction="#Exit" prefHeight="54.0" prefWidth="167.0" style="-fx-background-color: #ebecf1;" text="나가기" textFill="#206a5d">
+      <JFXButton fx:id="btnHome" layoutX="636.0" layoutY="903.0" onAction="#Exit" prefHeight="54.0" prefWidth="167.0" style="-fx-background-color: #206a5d;" text="나가기" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <Button fx:id="btnFChooser" layoutX="129.0" layoutY="325.0" mnemonicParsing="false" onAction="#fileChoose" style="-fx-background-color: #ffcf68;" text="📁  이미지 추가" textFill="#063572" />
+      <Button fx:id="btnFChooser" layoutX="125.0" layoutY="325.0" mnemonicParsing="false" onAction="#fileChoose" style="-fx-background-color: #ffcf68;" text="📁  이미지 추가" textFill="#206a5d" />
       <VBox layoutX="335.0" layoutY="267.0" prefHeight="607.0" prefWidth="504.0" spacing="20.0">
          <children>
             <VBox>
                <children>
-                  <Label text="제품명" textFill="#206a5d">
+                  <Label text="제품명">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXTextField fx:id="name" prefHeight="40.0" prefWidth="602.0" />
+                  <JFXTextField fx:id="name" focusColor="#206a5d" prefHeight="40.0" prefWidth="602.0" />
                </children>
             </VBox>
             <VBox>
                <children>
-                  <Label text="약 성분 및 외형" textFill="#206a5d">
+                  <Label text="약 성분 및 외형">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXTextField fx:id="character" prefHeight="40.0" prefWidth="602.0" />
+                  <JFXTextField fx:id="character" focusColor="#206a5d" prefHeight="40.0" prefWidth="602.0" />
                </children>
             </VBox>
             <VBox>
                <children>
-                  <Label text="효능" textFill="#206a5d">
+                  <Label text="효능">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXTextField fx:id="effect" prefHeight="40.0" prefWidth="602.0" />
+                  <JFXTextField fx:id="effect" focusColor="#206a5d" prefHeight="40.0" prefWidth="602.0" />
                </children>
             </VBox>
             <VBox>
                <children>
-                  <Label text="복용지도 및 주의사항" textFill="#206a5d">
+                  <Label text="복용지도 및 주의사항">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXTextField fx:id="warning" prefHeight="40.0" prefWidth="602.0" />
+                  <JFXTextField fx:id="warning" focusColor="#206a5d" prefHeight="40.0" prefWidth="602.0" />
                </children>
             </VBox>
             <VBox>
                <children>
-                  <Label text="제약회사" textFill="#206a5d">
+                  <Label text="제약회사">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXTextField fx:id="company" prefHeight="40.0" prefWidth="602.0" />
+                  <JFXTextField fx:id="company" focusColor="#206a5d" prefHeight="40.0" prefWidth="602.0" />
                </children>
             </VBox>
             <VBox>
                <children>
-                  <Label text="유통기한" textFill="#206a5d">
+                  <Label text="유통기한">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
                </children>
             </VBox>
-            <JFXDatePicker fx:id="expiration" defaultColor="#002c79" prefHeight="40.0" prefWidth="602.0" />
+            <JFXDatePicker fx:id="expiration" defaultColor="#206a5d" prefHeight="40.0" prefWidth="602.0" />
             <VBox>
                <children>
-                  <Label text="금액" textFill="#206a5d">
+                  <Label text="금액">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXTextField fx:id="price" prefHeight="40.0" prefWidth="602.0" />
+                  <JFXTextField fx:id="price" focusColor="#206a5d" prefHeight="40.0" prefWidth="602.0" />
                </children>
             </VBox>
             <VBox>
                <children>
-                  <Label text="재고" textFill="#206a5d">
+                  <Label text="재고">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <JFXTextField fx:id="stock" prefHeight="40.0" prefWidth="602.0" />
+                  <JFXTextField fx:id="stock" focusColor="#206a5d" prefHeight="40.0" prefWidth="602.0" />
                </children>
             </VBox>
          </children>
