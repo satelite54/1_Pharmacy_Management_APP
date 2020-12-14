@@ -132,5 +132,12 @@ public class DBRegisterController implements Initializable{
 		 public ImageView getImage() {
 			 return image;
 		 }
-	 }}
+	 }
+	 private String initImage(File imageFile) {
+		 String str = imageFile.toURI().toString(); //resource 폴더에서 불러오는 방법
+		 return str;
+	 }
+}
+
+
 

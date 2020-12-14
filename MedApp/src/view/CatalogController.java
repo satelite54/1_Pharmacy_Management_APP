@@ -117,11 +117,9 @@ public class CatalogController implements Initializable {
 			// 결과를 한 행식 읽어서 bookList 에서 입력
 			Medicine medicine;
 			while (rs.next()) {
-
 				medicine = new Medicine(rs.getString("name"), rs.getString("image"), rs.getString("character"),
 						rs.getString("effect"), rs.getString("warning"), rs.getString("company"),
-						rs.getDate("expirition"), rs.getInt("price"), rs.getInt("stock")); // DB 의 북스테이블에 있는 열이름
-
+						rs.getDate("expiration"), rs.getInt("price"), rs.getInt("stock")); // DB 의 북스테이블에 있는 열이름
 				medicineList.add(medicine); // 북리스트에 하나의 book 객체를 입력한다.
 			}
 

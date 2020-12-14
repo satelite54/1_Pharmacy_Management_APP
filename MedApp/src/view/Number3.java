@@ -105,7 +105,7 @@ public class Number3 implements Initializable {
     	Manage.setOnMouseClicked( evnet -> {
 		    // 원하는 실행문
 		   Stage stage = new Stage();
-		   String FXMLRout = "../view/DBSearch.fxml";
+		   String FXMLRout = "../view/Catalog.fxml";
 		   try {
 			page.CreatePage(stage, FXMLRout);
 		} catch (IOException e) {

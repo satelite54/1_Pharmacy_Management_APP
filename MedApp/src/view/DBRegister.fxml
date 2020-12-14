@@ -15,7 +15,7 @@
    <children>
       <ImageView fx:id="imgView" fitHeight="223.0" fitWidth="248.0" layoutX="65.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../bottle_of_pills.jpg" />
+            <Image url="@../img/default.jpg" />
          </image>
       </ImageView>
       <Label alignment="CENTER" layoutX="494.0" layoutY="179.0" prefHeight="37.0" prefWidth="232.0" style="-fx-background-color: #ebecf1;" text="DB등록" textFill="#206a5d">

@@ -125,7 +125,7 @@ public class SignUpController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// 초기 상태값을 설정
 		if(mov.getManagerOrViewer() == 1) {
-			ManagerOrViewer.setText("로그인 정보 관리자");
+			ManagerOrViewer.setText("로그인 정보 : 관리자");
 		} else {
 			msg.setMessage("권한없음!");
 			fullname.getScene().getWindow().hide();
