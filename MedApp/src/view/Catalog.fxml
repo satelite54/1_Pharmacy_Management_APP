@@ -32,29 +32,29 @@
             <Font size="50.0" />
          </font>
       </Label>
-      <ButtonBar fx:id="Catalogbtnbar" layoutX="457.0" layoutY="928.0" prefHeight="60.0" prefWidth="360.0">
-        <buttons>
-          <Button fx:id="CDelete" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#DeleteTuple" prefHeight="35.0" prefWidth="221.0" style="-fx-background-color: #206a5d;" text="삭제하기" textFill="WHITE">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <Button fx:id="CExit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Exit" prefHeight="35.0" style="-fx-background-color: #206a5d;" text="나가기" textFill="WHITE">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-        </buttons>
+      <ButtonBar fx:id="Catalogbtnbar" layoutX="301.0" layoutY="929.0" prefHeight="60.0" prefWidth="242.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
+         <buttons>
+          <Button fx:id="CDelete" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#DeleteTuple" prefHeight="35.0" prefWidth="165.0" style="-fx-background-color: #206a5d;" text="삭제하기" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </buttons>
       </ButtonBar>
-      <Button fx:id="goExpirition" alignment="CENTER" contentDisplay="CENTER" layoutX="52.0" layoutY="941.0" mnemonicParsing="false" onAction="#goExpiritionbtn" prefHeight="35.0" prefWidth="165.0" style="-fx-background-color: #206a5d;" text="유통기한 확인" textFill="WHITE">
+      <Button fx:id="goExpirition" alignment="CENTER" contentDisplay="CENTER" layoutX="740.0" layoutY="942.0" mnemonicParsing="false" onAction="#goExpiritionbtn" prefHeight="35.0" prefWidth="165.0" style="-fx-background-color: #206a5d;" text="유통기한 확인" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
       <Label fx:id="label1" layoutX="21.0" layoutY="123.0" text="Label" visible="false" />
       <Label fx:id="ManagerOrViewer" layoutX="24.0" layoutY="24.0" prefHeight="22.0" prefWidth="175.0" />
+      <Button fx:id="CExit" alignment="CENTER" contentDisplay="CENTER" layoutX="559.0" layoutY="942.0" mnemonicParsing="false" onAction="#Exit" prefHeight="35.0" prefWidth="165.0" style="-fx-background-color: #206a5d;" text="나가기" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
