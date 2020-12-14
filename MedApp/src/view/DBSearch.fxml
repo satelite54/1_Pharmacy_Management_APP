@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -41,6 +43,11 @@
          </font>
       </JFXButton>
       <JFXTextField fx:id="textField" focusColor="#206a5d" layoutX="285.0" layoutY="183.0" prefHeight="71.0" prefWidth="603.0" />
-      <Label fx:id="ManagerOrViewer" layoutX="24.0" layoutY="24.0" prefHeight="22.0" prefWidth="175.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/3Dlogo(hires).gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="ManagerOrViewer" layoutX="17.0" layoutY="54.0" prefHeight="22.0" prefWidth="175.0" />
    </children>
 </AnchorPane>

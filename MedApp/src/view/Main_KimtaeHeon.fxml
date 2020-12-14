@@ -37,12 +37,17 @@
       <Text layoutX="807.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" text="유통기한 임박" />
       <JFXButton id="Searchbtn" fx:id="Searchbtn" layoutX="743.0" layoutY="293.0" onAction="#onClickSearchbtn" prefHeight="40.0" prefWidth="47.0" ripplerFill="BLACK" />
       <Text layoutX="1166.0" layoutY="982.0" strokeType="OUTSIDE" strokeWidth="0.0" text="사용자 등록" wrappingWidth="66.0" />
-      <ListView fx:id="SearchListBox" layoutX="478.0" layoutY="333.0" prefHeight="78.0" prefWidth="312.0" />
-      <Label fx:id="ManagerOrViewer" layoutX="14.0" layoutY="14.0" prefHeight="22.0" prefWidth="175.0" />
+      <Label fx:id="ManagerOrViewer" layoutX="17.0" layoutY="54.0" prefHeight="22.0" prefWidth="175.0" />
 	  <ImageView fitHeight="32" fitWidth="32" layoutX="753.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
 	  	<image>
 	  		<Image url="@../img/ShelfLife.PNG" />
 	  	</image>
 	  </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/3Dlogo(hires).gif" />
+         </image>
+      </ImageView>
+      <ListView fx:id="SearchListBox" layoutX="478.0" layoutY="333.0" prefHeight="78.0" prefWidth="312.0" />
    </children>
 </AnchorPane>

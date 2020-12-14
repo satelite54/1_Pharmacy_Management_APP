@@ -27,5 +27,10 @@
             <TableColumn fx:id="colHost" minWidth="0.0" prefWidth="200.0" text="Host" />
         </columns>
       </TableView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/3Dlogo(hires).gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

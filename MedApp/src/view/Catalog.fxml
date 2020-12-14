@@ -6,10 +6,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CatalogController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CatalogController">
    <children>
       <TableView fx:id="tbCatalog" layoutX="153.0" layoutY="113.0" onMousePressed="#OMPon" prefHeight="798.0" prefWidth="976.0">
         <columns>
@@ -50,11 +52,16 @@
          </font>
       </Button>
       <Label fx:id="label1" layoutX="21.0" layoutY="123.0" text="Label" visible="false" />
-      <Label fx:id="ManagerOrViewer" layoutX="24.0" layoutY="24.0" prefHeight="22.0" prefWidth="175.0" />
       <Button fx:id="CExit" alignment="CENTER" contentDisplay="CENTER" layoutX="559.0" layoutY="942.0" mnemonicParsing="false" onAction="#Exit" prefHeight="35.0" prefWidth="165.0" style="-fx-background-color: #206a5d;" text="나가기" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/3Dlogo(hires).gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="ManagerOrViewer" layoutX="17.0" layoutY="54.0" prefHeight="22.0" prefWidth="175.0" />
    </children>
 </AnchorPane>
