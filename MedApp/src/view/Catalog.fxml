@@ -27,19 +27,19 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="451.0" layoutY="45.0" prefHeight="61.0" prefWidth="379.0" text="DB 목록" textAlignment="CENTER" textFill="#465b68" textOverrun="CENTER_ELLIPSIS">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="451.0" layoutY="45.0" prefHeight="61.0" prefWidth="379.0" text="DB 목록" textAlignment="CENTER" textFill="#206a5d" textOverrun="CENTER_ELLIPSIS">
          <font>
-            <Font size="37.0" />
+            <Font size="50.0" />
          </font>
       </Label>
       <ButtonBar fx:id="Catalogbtnbar" layoutX="457.0" layoutY="928.0" prefHeight="60.0" prefWidth="360.0">
         <buttons>
-          <Button fx:id="CDelete" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#DeleteTuple" prefHeight="35.0" prefWidth="221.0" text="삭제하기">
+          <Button fx:id="CDelete" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#DeleteTuple" prefHeight="35.0" prefWidth="221.0" style="-fx-background-color: #206a5d;" text="삭제하기" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="CExit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Exit" prefHeight="35.0" text="나가기">
+            <Button fx:id="CExit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Exit" prefHeight="35.0" style="-fx-background-color: #206a5d;" text="나가기" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
@@ -49,7 +49,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </ButtonBar>
-      <Button fx:id="goExpirition" alignment="CENTER" contentDisplay="CENTER" layoutX="52.0" layoutY="941.0" mnemonicParsing="false" onAction="#goExpiritionbtn" prefHeight="35.0" prefWidth="165.0" text="유통기한 확인">
+      <Button fx:id="goExpirition" alignment="CENTER" contentDisplay="CENTER" layoutX="52.0" layoutY="941.0" mnemonicParsing="false" onAction="#goExpiritionbtn" prefHeight="35.0" prefWidth="165.0" style="-fx-background-color: #206a5d;" text="유통기한 확인" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
