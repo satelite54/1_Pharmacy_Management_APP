@@ -19,24 +19,24 @@
          </image>
       </ImageView>
       <Label layoutX="17.0" layoutY="54.0" prefHeight="15.0" prefWidth="141.0" />
-      <TableView layoutX="65.0" layoutY="224.0" prefHeight="733.0" prefWidth="536.0">
+      <TableView layoutX="65.0" layoutY="179.0" prefHeight="733.0" prefWidth="536.0">
         <columns>
           <TableColumn prefWidth="269.0" text="마스크 종류" />
           <TableColumn prefWidth="266.0" text="재고량" />
         </columns>
       </TableView>
-      <Label layoutX="514.0" layoutY="98.0" text="마스크 현황" textFill="#206a5d">
+      <Label layoutX="514.0" layoutY="45.0" text="마스크 현황" textFill="#206a5d">
          <font>
             <Font size="50.0" />
          </font>
       </Label>
-      <JFXComboBox focusColor="#206a5d" layoutX="755.0" layoutY="207.0" prefHeight="40.0" prefWidth="341.0" promptText="마스크 종류를 선택해주세요." unFocusColor="#0f3f36" />
-      <JFXTextField focusColor="#206a5d" layoutX="755.0" layoutY="408.0" prefHeight="40.0" prefWidth="341.0" text="구매가능한 마스크 수: ">
+      <JFXComboBox focusColor="#206a5d" layoutX="755.0" layoutY="179.0" prefHeight="40.0" prefWidth="341.0" promptText="마스크 종류를 선택해주세요." unFocusColor="#0f3f36" />
+      <JFXTextField focusColor="#206a5d" layoutX="755.0" layoutY="404.0" prefHeight="40.0" prefWidth="341.0" text="구매가능한 마스크 수: ">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <Label layoutX="755.0" layoutY="332.0" prefHeight="40.0" prefWidth="341.0" style="-fx-background-color: #EBECF1;" text="주민번호를 입력하세요." textFill="#a6a6a6">
+      <Label layoutX="755.0" layoutY="323.0" prefHeight="40.0" prefWidth="341.0" style="-fx-background-color: #EBECF1;" text="주민번호를 입력하세요." textFill="#a6a6a6">
          <font>
             <Font size="15.0" />
          </font>
@@ -46,7 +46,7 @@
             <Font size="16.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="1034.0" layoutY="332.0" prefHeight="40.0" prefWidth="62.0" style="-fx-background-color: #206a5d;" text="검색" textFill="WHITE">
+      <JFXButton layoutX="1034.0" layoutY="323.0" prefHeight="40.0" prefWidth="62.0" style="-fx-background-color: #206a5d;" text="검색" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

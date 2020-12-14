@@ -15,7 +15,7 @@
             <Image url="@../img/back2.jpg" />
          </image>
       </ImageView>
-      <JFXButton fx:id="btnShow" layoutX="560.0" layoutY="44.0" onAction="#handleButton" prefHeight="47.0" prefWidth="151.0" style="-fx-border-color: #000000;" text="Team List">
+      <JFXButton fx:id="btnShow" layoutX="560.0" layoutY="44.0" onAction="#handleButton" prefHeight="45.0" prefWidth="151.0" style="-fx-border-color: #000000;" text="Team List">
          <font>
             <Font name="Arial Bold" size="19.0" />
          </font></JFXButton>
