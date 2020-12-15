@@ -13,6 +13,7 @@ import com.jfoenix.controls.JFXTextField;
 import com.sun.javafx.image.impl.ByteIndexed.Getter;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -33,6 +34,9 @@ public class Number3 implements Initializable {
 
     @FXML
     private ImageView add;
+
+    @FXML
+    private ImageView add1;
 
     @FXML
     private ImageView input;
@@ -135,6 +139,17 @@ public class Number3 implements Initializable {
 			e.printStackTrace();
 		}
 		});
+
+//    	add1.setOnMouseClicked( evnet -> {
+//    		Stage stage = new Stage();
+//    		String FXMLRout = "../view/HomePage.fxml";
+//    		try {
+//    			page.CreatePage(stage, FXMLRout);
+//    		} catch (IOException e) {
+//    			// TODO Auto-generated catch block
+//    			e.printStackTrace();
+//    		}
+//    	});
 
     	SearchListBox.setOnMouseClicked ((MouseEvent) -> {
     		if(MouseEvent.getClickCount() == 2) {
