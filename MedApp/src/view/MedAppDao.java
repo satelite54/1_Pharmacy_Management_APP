@@ -4,14 +4,13 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.text.SimpleDateFormat;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import model.DBConnect;
 import model.Medicine;
+import model.CSingelton;
 
 public class MedAppDao {
 
@@ -19,6 +18,8 @@ public class MedAppDao {
 	private PreparedStatement pstmt;
 	private ObservableList<Medicine> data;
 
+
+	CSingelton Singelton = CSingelton.getInstance();
 
 	public MedAppDao() {
 		DBConnect connect = new DBConnect();
@@ -86,10 +87,12 @@ public ObservableList<Medicine> getData() {
 
 			while (rs.next()) {
 				String str = rs.getString("expiration");
-				String strCut = str.substring(0, 8);
-				String route = rs.getString("image");
-				ImageView img = new ImageView(new Image(route));
-				Medicine medicine = new Medicine(rs.getString("name"), img,
+				String strCut = str.substring(0, 11);
+
+
+				Singelton.AryList.add(rs.getString("image"));
+
+				Medicine medicine = new Medicine(rs.getString("name"), rs.getString("image"),
 						rs.getString("character"), rs.getString("effect"), rs.getString("warning"),
 						rs.getString("company"),strCut,
 						Integer.parseInt(rs.getString("price")),

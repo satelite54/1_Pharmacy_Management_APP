@@ -11,13 +11,16 @@ import com.jfoenix.controls.JFXTextField;
 
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import model.CSingelton;
@@ -80,12 +83,24 @@ public class DBSearchController implements Initializable {
     @FXML
     private JFXButton btnHome;
 
+    @FXML
+    private ImageView Searchimg;
+
     CSingelton Singelotn = CSingelton.getInstance();
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-    	if(Singelotn.getManagerOrViewer() == 1) {
+
+	Table.setOnMouseClicked(new EventHandler<MouseEvent>() {
+		    @Override
+		    public void handle(MouseEvent event) {
+
+		    	Searchimg.setImage(new Image(Singelotn.AryList.get(Table.getSelectionModel().getSelectedIndex())));
+		    }
+		  });
+
+
+		if(Singelotn.getManagerOrViewer() == 1) {
     		ManagerOrViewer.setText("로그인 정보 : 관리자");
     	}
     	else {
@@ -121,11 +136,15 @@ public class DBSearchController implements Initializable {
     	btnHome.getScene().getWindow().hide();
     }
 
+
+
     private void MedicineTableSet(String text) {
     	data = MedDao.searchByName(text);
 
+
+
     	colName.setCellValueFactory(new PropertyValueFactory<Medicine, String>("name"));
-    	imageCol.setCellValueFactory(new PropertyValueFactory<Medicine, ImageView>("image"));
+//    	imageCol.setCellValueFactory(new PropertyValueFactory<Medicine, ImageView>("image"));
     	colCharacter.setCellValueFactory(new PropertyValueFactory<Medicine, String>("character"));
     	colEffect.setCellValueFactory(new PropertyValueFactory<Medicine, String>("effect"));
     	colWarning.setCellValueFactory(new PropertyValueFactory<Medicine, String>("warning"));

@@ -32,9 +32,8 @@ public class Medicine {
 	this.stock = stock;
 }
 	public Medicine(String name, String image, String character, String effect, String warning, String company, String expiration1,
-			int price, int stock) {
+			int price, int stock) { // medAppDao ¿ë
 	this.name = name;
-	this.image = image;
 	this.character = character;
 	this.effect = effect;
 	this.warning = warning;
