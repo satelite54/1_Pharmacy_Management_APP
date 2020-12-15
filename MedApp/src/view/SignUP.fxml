@@ -20,12 +20,12 @@
             <Image url="@../img/team01-02.jpg" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="488.0" layoutY="231.0" prefHeight="74.0" prefWidth="304.0" text="S I G N U P" textFill="#206a5d">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="488.0" layoutY="269.0" prefHeight="74.0" prefWidth="304.0" text="S I G N U P" textFill="#206a5d">
          <font>
             <Font name="System Bold" size="50.0" />
          </font>
       </Label>
-      <Pane layoutX="337.0" layoutY="328.0" opacity="0.78" prefHeight="469.0" prefWidth="606.0" style="-fx-background-color: #FFFFFF;">
+      <Pane layoutX="337.0" layoutY="366.0" opacity="0.78" prefHeight="469.0" prefWidth="606.0" style="-fx-background-color: #FFFFFF;">
          <children>
             <JFXTextField fx:id="fullname" focusColor="#206a5d" layoutX="119.0" layoutY="73.0" maxWidth="368.0" minWidth="368.0" prefHeight="31.0" prefWidth="368.0" style="-fx-background-color: 1b1c25;" unFocusColor="#ebecf1">
                <font>
@@ -69,15 +69,6 @@
             </JFXButton>
          </children>
       </Pane>
-      <Pane layoutY="-1.0" prefHeight="70.0" prefWidth="1280.0" style="-fx-background-color: #206a5d;">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/croppedLogo.gif" />
-               </image>
-            </ImageView>
-         </children>
-      </Pane>
       <Text fill="#1b1c25" fontSmoothingType="LCD" layoutX="1075.0" layoutY="907.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CS      CENTER" wrappingWidth="106.00000762939453">
          <font>
             <Font name="System Bold" size="24.0" />
@@ -89,16 +80,21 @@
          </font>
       </Text>
       <Line endX="19.0" layoutX="1176.0" layoutY="956.0" smooth="false" startX="-100.0" stroke="#206a5d" strokeLineJoin="ROUND" />
-      <JFXButton fx:id="login" layoutX="86.0" layoutY="103.0" onAction="#goLogin" prefHeight="64.0" prefWidth="180.0" text="GO Login!" textFill="#1b1c25">
+      <JFXButton fx:id="login" layoutX="74.0" layoutY="175.0" onAction="#goLogin" prefHeight="64.0" prefWidth="180.0" text="GO Login!" textFill="#1b1c25">
          <font>
             <Font name="System Bold Italic" size="26.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="60.0" fitWidth="63.0" layoutX="59.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="60.0" fitWidth="63.0" layoutX="47.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/png01.png" />
          </image>
       </ImageView>
       <Label fx:id="ManagerOrViewer" layoutX="17.0" layoutY="70.0" prefHeight="22.0" prefWidth="175.0" />
+      <ImageView fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/croppedLogo.gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

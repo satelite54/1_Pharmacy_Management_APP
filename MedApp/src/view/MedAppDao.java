@@ -8,6 +8,8 @@ import java.text.SimpleDateFormat;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import model.DBConnect;
 import model.Medicine;
 
@@ -85,7 +87,9 @@ public ObservableList<Medicine> getData() {
 			while (rs.next()) {
 				String str = rs.getString("expiration");
 				String strCut = str.substring(0, 8);
-				Medicine medicine = new Medicine(rs.getString("name"), rs.getString("image"),
+				String route = rs.getString("image");
+				ImageView img = new ImageView(new Image(route));
+				Medicine medicine = new Medicine(rs.getString("name"), img,
 						rs.getString("character"), rs.getString("effect"), rs.getString("warning"),
 						rs.getString("company"),strCut,
 						Integer.parseInt(rs.getString("price")),

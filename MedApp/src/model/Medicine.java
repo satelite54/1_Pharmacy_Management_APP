@@ -2,6 +2,8 @@ package model;
 
 import java.sql.Date;
 
+import javafx.scene.image.ImageView;
+
 public class Medicine {
 	private String name;
 	private String image;
@@ -12,6 +14,8 @@ public class Medicine {
 	private Date expiration;
 	private int price;
 	private int stock;
+
+	private ImageView img;
 
 	private String expiration1;
 
@@ -31,6 +35,19 @@ public class Medicine {
 			int price, int stock) {
 	this.name = name;
 	this.image = image;
+	this.character = character;
+	this.effect = effect;
+	this.warning = warning;
+	this.company = company;
+	this.setExpiration1(expiration1);
+	this.price = price;
+	this.stock = stock;
+}
+
+	public Medicine(String name, ImageView img, String character, String effect, String warning, String company, String expiration1,
+			int price, int stock) {
+	this.name = name;
+	this.img = img;
 	this.character = character;
 	this.effect = effect;
 	this.warning = warning;

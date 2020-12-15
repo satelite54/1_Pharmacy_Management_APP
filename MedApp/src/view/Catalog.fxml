@@ -13,7 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CatalogController">
    <children>
-      <TableView fx:id="tbCatalog" layoutX="153.0" layoutY="113.0" onMousePressed="#OMPon" prefHeight="798.0" prefWidth="976.0">
+      <TableView fx:id="tbCatalog" layoutX="152.0" layoutY="240.0" onMousePressed="#OMPon" prefHeight="588.0" prefWidth="1000.0">
         <columns>
           <TableColumn fx:id="tbname" prefWidth="151.0" text="약 이름" />
           <TableColumn fx:id="tbimage" prefWidth="51.0" text="약 모양" />
@@ -29,35 +29,35 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="451.0" layoutY="45.0" prefHeight="61.0" prefWidth="379.0" text="DB 목록" textAlignment="CENTER" textFill="#206a5d" textOverrun="CENTER_ELLIPSIS">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="451.0" layoutY="65.0" prefHeight="61.0" prefWidth="379.0" text="DB 목록" textAlignment="CENTER" textFill="#206a5d" textOverrun="CENTER_ELLIPSIS">
          <font>
-            <Font size="50.0" />
+            <Font name="System Bold" size="50.0" />
          </font>
       </Label>
-      <ButtonBar fx:id="Catalogbtnbar" layoutX="301.0" layoutY="929.0" prefHeight="60.0" prefWidth="242.0">
+      <ButtonBar fx:id="Catalogbtnbar" layoutX="303.0" layoutY="882.0" prefHeight="60.0" prefWidth="242.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
          <buttons>
-          <Button fx:id="CDelete" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#DeleteTuple" prefHeight="35.0" prefWidth="165.0" style="-fx-background-color: #206a5d;" text="삭제하기" textFill="WHITE">
+          <Button fx:id="CDelete" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#DeleteTuple" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #206a5d;" text="삭제하기" textFill="WHITE">
                <font>
-                  <Font size="16.0" />
+                  <Font name="System Bold Italic" size="16.0" />
                </font>
             </Button>
          </buttons>
       </ButtonBar>
-      <Button fx:id="goExpirition" alignment="CENTER" contentDisplay="CENTER" layoutX="740.0" layoutY="942.0" mnemonicParsing="false" onAction="#goExpiritionbtn" prefHeight="35.0" prefWidth="165.0" style="-fx-background-color: #206a5d;" text="유통기한 확인" textFill="WHITE">
+      <Button fx:id="goExpirition" alignment="CENTER" contentDisplay="CENTER" layoutX="735.0" layoutY="892.0" mnemonicParsing="false" onAction="#goExpiritionbtn" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #206a5d;" text="유통기한 확인" textFill="WHITE">
          <font>
-            <Font size="16.0" />
+            <Font name="System Bold Italic" size="16.0" />
          </font>
       </Button>
       <Label fx:id="label1" layoutX="21.0" layoutY="123.0" text="Label" visible="false" />
-      <Button fx:id="CExit" alignment="CENTER" contentDisplay="CENTER" layoutX="559.0" layoutY="942.0" mnemonicParsing="false" onAction="#Exit" prefHeight="35.0" prefWidth="165.0" style="-fx-background-color: #206a5d;" text="나가기" textFill="WHITE">
+      <Button fx:id="CExit" alignment="CENTER" contentDisplay="CENTER" layoutX="560.0" layoutY="892.0" mnemonicParsing="false" onAction="#Exit" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #206a5d;" text="나가기" textFill="WHITE">
          <font>
-            <Font size="16.0" />
+            <Font name="System Bold Italic" size="16.0" />
          </font>
       </Button>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="400.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/3Dlogo(hires).gif" />
          </image>
