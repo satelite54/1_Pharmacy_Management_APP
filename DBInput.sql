@@ -1,51 +1,65 @@
+DROP TABLE medicine;
 CREATE TABLE Medicine (
-  name INT NOT NULL,
-  image VARCHAR(100) NOT NULL,
-  character VARCHAR(100) NOT NULL,
-  effect VARCHAR(100) NOT NULL,
-  warning VARCHARì§€(100) NOT NULL,
-  company VARCHAR(100) NOT NULL,
+  name VARCHAR2(1000) NOT NULL,
+  image VARCHAR2(1000) NOT NULL,
+  character VARCHAR2(1000) NOT NULL,
+  effect VARCHAR2(1000) NOT NULL,
+  warning VARCHAR2(1000) NOT NULL,
+  company VARCHAR2(1000) NOT NULL,
   expiration DATE NOT NULL,
-  price NUMBER(100) NOT NULL,
-  stock NUMBER(100) NOT NULL,
+  price NUMBER NOT NULL,
+  stock NUMBER NOT NULL,
   PRIMARY KEY (name)
-  
 );
 
 INSERT INTO Medicine
     (name, image, character, effect, warning, company, expiration, price, stock) 
 VALUES 
-    ("í‹°ëˆˆë°´ë“œ", "file:/C:/MedApp/src/img/tinunband.png", "ì‚´ìƒ‰ ë°´ë“œ", "í‹°ëˆˆ ì œê±°", "ë‹¹ë‡¨ë³‘í™˜ìž ì‚¬ìš© ê¸ˆì§€", "ì‹ ì‹ ", ('2020/12/20', 'YYYY/MM/DD'), 3500, 5),
-   ("ë¹„íŒí…", "file:/C:/MedApp/src/img/bepanthen.png", "í•˜ì–€ìƒ‰ ì—°ê³ ", "ìƒì²˜ ë° ìŠµì§„ ì¹˜ë£Œ", "ëˆˆ ì ‘ì´‰ ì£¼ì˜", "ë°”ì´ì—˜ì½”ë¦¬ì•„", ('2020/12/21', 'YYYY/MM/DD'), 8000, 6),
-   ("í—¤ëª¨í¬ìŠ¤ ì •", "file:/C:/MedApp/src/img/hemaforce.png", "ìž¥ë°©í˜• ê°ˆìƒ‰", "ì²  ê²°í• ë° ë¹ˆí˜ˆ ì˜ˆë°©", "ì•Œë ˆë¥´ê¸° ì£¼ì˜", "ì œì´ë”ë¸”ìœ ì¤‘ì™¸ì œì•½ì œì´ë”ë¸”ìœ ì¤‘ì™¸ì œì•½", ('2020/12/20', 'YYYY/MM/DD'), 20000, 7),
-   ("ë¦°ë‹¨ë¡œì˜¤ìˆ€", "file:/C:/MedApp/src/img/lindan.png", "ë°±ìƒ‰ì˜ í˜„íƒì„± ë¡œì˜¤ìˆ€ì œ", "ë¨¸ë¦¬ì´ ê°ì—¼ì¦", "ìž„ì‚°ë¶€ ì£¼ì˜", "ì‹ ì‹ ", ('2020/12/24', 'YYYY/MM/DD'), 4000, 3),
-   ("ë‘í”¼ì•¤", "file:/C:/MedApp/src/img/dupi.png", "ì•¡ì²´", "ê°€ë ¤ì›€, í”¼ë¶€ì—¼", "1ì¼ ìˆ˜íšŒ ì‚¬ìš©", "í•œë¯¸", ('2020/12/31', 'YYYY/MM/DD'), 3500, 4),
-   ("ë¼ë¯¸ì‹¤", "file:/C:/MedApp/src/img/lamisil.png", "ë°±ìƒ‰ì˜ í¬ë¦¼ì œ", "í”¼ë¶€ì§„ê· ê°ì—¼ì¦í”¼ë¶€ì§„ê· ê°ì—¼ì¦", "1ì¼ 1-2íšŒ, ì†Œì•„ ì‚¬ìš©ì£¼ì˜", "ê¸€ë½ì†ŒìŠ¤ë¯¸ìŠ¤í´ë¼ì¸ì»¨ìŠˆë¨¸í—¬ìŠ¤ì¼€ì–´ì½”ë¦¬ì•„ê¸€ë½ì†ŒìŠ¤ë¯¸ìŠ¤í´ë¼ì¸ì»¨ìŠˆë¨¸í—¬ìŠ¤ì¼€ì–´ì½”ë¦¬ì•„", ('2020/12/20', 'YYYY/MM/DD'), 8000, 3),
-   ("ì´ì§€ì¼€ì–´ë„¤ì¼ë¼ì¹´", "file:/C:/MedApp/src/img/easycare.png", "íˆ¬ëª…ì•¡ì²´", "ì¡°ê°‘ì§„ê· ì¦", "30ì´ˆ ê±´ì¡° í›„ 6ì‹œê°„ ì„¸ì²™ê¸ˆì§€, 18ì„¸ ë¯¸ë§Œ ì£¼ì˜", "ìœ í•œì–‘í–‰", ('2021/01/01', 'YYYY/MM/DD'), 10000, 10),
-   ("íƒ€ì´ë ˆë†€", "file:/C:/MedApp/src/img/tylenol.png", "í°ìƒ‰ì˜ ì •ë°©í˜• í•„ë¦„ì½”íŒ…ì •", "í•´ì—´, ì§„í†µ, ì†Œì—¼ì œ", "ë§Œ12ì„¸ ì´ìƒ 1ì¼ 3íšŒ", "í•œêµ­ì–€ì„¼", ('2021/02/20', 'YYYY/MM/DD'), 3000, 7),
-   ("ì•„ìŠ¤í”¼ë¦°", "file:/C:/MedApp/src/img/aspirin.png", "í°ìƒ‰ì˜ ì›í˜• í•„ë¦„ì½”íŒ…ì •", "í˜ˆì „ ìƒì„± ì–µì œ", "1ì¼ 1íšŒ 1ì •, í˜ˆìš°ë³‘ í™˜ìž ì‚¬ìš©ê¸ˆì§€", "í•œë¯¸ì•½í’ˆ", ('2021/02/18', 'YYYY/MM/DD'), 5000, 7),
-   ("ë ‰ì„¼ì—ìŠ¤ì¢Œì œ", "file:/C:/MedApp/src/img/rexen.png", "í°ìƒ‰ì˜ í¬íƒ„í˜• ì¢Œì œ", "ì¹˜ì§ˆ ì¦ìƒ ì™„í™”", "í™˜ë¶€ê°€ í™”ë†ë˜ì–´ìžˆëŠ” í™˜ìž ì‚¬ìš© ê¸ˆì§€", "í•œë¦¼ì œì•½", ('2021/03/15', 'YYYY/MM/DD'), 20000, 4),
-   ("í„°ì¹˜ë©”ë“œ", "file:/C:/MedApp/src/img/touchmed.png", "ì—·ì€ ì²­ìƒ‰ì˜ ì—°ê³ ì œ", "êµ¬ë‚´ì—¼, ì„¤ì—¼", "1ì¼ 2-4íšŒ í™˜ë¶€ì— ë„í¬, ì•Œë ˆë¥´ê¸°ì£¼ì˜", "ë™í™”ì•½í’ˆ", ('2022/06/22', 'YYYY/MM/DD'), 5000, 4),
-   ("ìŠ¤í† ë§ˆì‹ ", "file:/C:/MedApp/src/img/stomasin.png", "íŒŒëž‘ì˜ ìž¥ë°©í˜• ê²½ì§ˆìº¡ìŠ", "íŽ¸ë„ì—¼ ì™„í™”", "1íšŒ 2ìº¡ìŠ, ìœ ë‹¹ë¶ˆë‚´ì¦ í™˜ìž ì‚¬ìš©ê¸ˆì§€", "ì•„ì´ì›”ë“œì œì•½", ('2022/04/05', 'YYYY/MM/DD'), 8000, 3),
-   ("ìŠ¤íŠ¸ë ™ì‹¤í—ˆë‹ˆì•¤ë ˆëª¬", "file:/C:/MedApp/src/img/strepsils.png", "ì£¼í™©ìƒ‰ì˜ ì›í˜• íŠ¸ë¡œí‚¤ì •", "íš¨ê³¼\\ì¸í›„ì—¼ ì¦ìƒ ì™„í™”", "1ì¼ ìµœëŒ€ 5ê°œ ë³µìš©", "ì˜¥ì‹œë ˆí‚·ë²¤í‚¤ì €", ('2022/03/20', 'YYYY/MM/DD'), 8000, 6),
-   ("í´ë¦¬ë´íŠ¸", "file:/C:/MedApp/src/img/pollydent.png", "ë°œí¬ì •", "í‹€ë‹ˆ, ì˜ì¹˜ ì„¸ì •, ë°©ì·¨íš¨ê³¼", "ì‚¼í‚¤ì§€ ë§ ê²ƒ", "ê¸€ë½ì†ŒìŠ¤ë¯¸ìŠ¤í´ë¼ì¸", ('2022/02/01', 'YYYY/MM/DD'), 25000, 8),
-   ("ì½”íí…11", "file:/C:/MedApp/src/img/coq10.png", "ì ìƒ‰ì˜ ì—°ì§ˆìº¡ìŠ", "í•­ì‚°í™”ì™€ í˜ˆì••ê°ì†Œë„ì›€", "1ì¼ ìº¡ìŠ", "GNM", ('2022/09/10', 'YYYY/MM/DD'), 30000, 4),
-   ("ì±”í”½ìŠ¤", "file:/C:/MedApp/src/img/champix.png", "ë°±ìƒ‰ì˜ ìž¥ë°©í˜• í•„ë¦„ì½”íŒ…ì •ë°±ìƒ‰ì˜ ìž¥ë°©í˜• í•„ë¦„ì½”íŒ…ì •", "ê¸ˆì—°ì¹˜ë£Œì˜ ë³´ì¡°ìš”ë²•ê¸ˆì—°ì¹˜ë£Œì˜ ë³´ì¡°ìš”ë²•", "ìžì‚´ê²½í–¥ì„± ì£¼ì˜ìžì‚´ê²½í–¥ì„± ì£¼ì˜", "í™”ì´ìží™”ì´ìž", ('2021/12/20', 'YYYY/MM/DD'), 15000, 8),
-   ("í‹°ëˆˆì•¡", "file:/C:/MedApp/src/img/tinun.png", "íˆ¬ëª…ì•¡ì²´", "í‹°ëˆˆ, êµ³ì€ì‚´ ì œê±°", "2-5ì¼ í›„ êµì²´", "ì‹ ì‹ ", ('2021/07/13', 'YYYY/MM/DD'), 2800, 3),
-   ("í´ë¦°í´ê´€ë¥˜ì œ", "file:/C:/MedApp/src/img/cleancle.png", "ë¬´ìƒ‰íˆ¬ëª…í•œ ì•¡", "ê´€ë¥˜, ì ë§‰ì„¸ì •, ê°ë‹´ë°°ì¶œ ì´‰ì§„", "ì£¼ì‚¬ì œë¡œ ì‚¬ìš©ê¸ˆì§€", "ì œì´ë”ë¸”ìœ ìƒëª…ê³¼í•™", ('2023/02/17', 'YYYY/MM/DD'), 1700, 3),
-   ("ì˜ì§„ìŒí™”íƒ•ì•¡", "file:/C:/MedApp/src/img/juice.png", "ìƒì•½ì˜ ëƒ„ìƒˆê°€ë‚˜ëŠ” ê°ˆìƒ‰ì˜ ì•¡ì²´", "í—ˆì•½ì²´ì§ˆ, í”¼ë¡œíšŒë³µ, ê³¼ë¡œ", "ê³ í˜ˆì••í™˜ìž ì£¼ì˜, 1ì¼ 3íšŒ", "í•´íƒœì—ì´ì¹˜í‹°ë¹„", ('2020/12/22', 'YYYY/MM/DD'), 3700, 4),
-   ("ë¡œì´ë””íŽœ", "file:/C:/MedApp/src/img/roidipen.png", "ì™¸í˜•", "ì„¤ì‚¬, ë¬½ì€ ë³€, ì²´í•¨, í† ì‚¬", "15ì„¸ ì´ìƒ, 1íšŒ2ìº¡ìŠ 1ì¼ 2íšŒ", "ë¯¸ëž˜ì œì•½", ('2020/12/23', 'YYYY/MM/DD'), 7000, 4),
-   ("ìŠ¤í† ë§ˆí", "file:/C:/MedApp/src/img/stomaq.png", "í™©ê°ˆìƒ‰ì˜ ê³¼ë¦½ì œ", "ë‹µë‹µí•œ ëª…ì¹˜, ì‹ ê²½ê³¼ë¯¼ ì¦ìƒ ì™„í™”", "1ì¼ 3íšŒ, ê³ í˜ˆì•• í™˜ìž ì£¼ì˜", "ê²½ë°©ì‹ ì•½", ('2020/12/23', 'YYYY/MM/DD'), 4000, 4),
-   ("ë¶€ìŠ¤ì½”íŒí”ŒëŸ¬ìŠ¤ì •", "file:/C:/MedApp/src/img/buscopan.png", "ë°±ìƒ‰ì˜ íƒ€ì›í˜• í•„ë¦„ì½”íŒ…ì •", "ë‹´ë„ê³„ ê¸°ëŠ¥ìž¥ì•  ë° ê²½ë ¨ì„± ë™í†µ", "1ì¼ 3íšŒ, ìˆ ê³¼ í•¨ê»˜ ë³µìš©ì‹œ ê°„ì†ìƒ ìœ ë°œ", "ì‚¬ë…¸í”¼ì•„ë²¤í‹°ìŠ¤ì½”ë¦¬ì•„", ('2020/12/27', 'YYYY/MM/DD'), 7000, 6),
-   ("ë³´ë¯¸ë¡±ì‚°", "file:/C:/MedApp/src/img/bomilong.png", "í™©ìƒ‰ì˜ ì‚°ì œ", "ë©€ë¯¸ì— ì˜í•œ ì–´ì§€ëŸ¬ì›€, êµ¬í† , ë‘í†µì˜ ì˜ˆë°© ë° ì™„í™”", "ì„±ì¸: 1íšŒ 1í¬,ì†Œì•„: 1íšŒ 2/3í¬ ", "ì˜ì¼ì œì•½", ('2020/12/31', 'YYYY/MM/DD'), 5000, 1),
-   ("ì–´ë¦°ì´í‚¤ë¯¸í…ŒíŒ¨ì·¨", "file:/C:/MedApp/src/img/kimite.png", "ì—·ì€ í™©ê°ˆìƒ‰ì˜ í´ë¦¬ì—ìŠ¤í…Œë¥´í•„ë¦„ì†Œìž¬ì˜ ì›í˜• íŒ¨ì·¨", "ë©€ë¯¸ì— ì˜í•œ êµ¬ì—­, êµ¬í† ì˜ ì˜ˆë°©", "7ì„¸ ì´í•˜ ì‚¬ìš©ê¸ˆì§€", "ëª…ë¬¸ì œì•½", ('2020/12/31', 'YYYY/MM/DD'), 18000, 7),
-   ("ì¸ì‚¬ëŒì •", "file:/C:/MedApp/src/img/insadol.png", "ì£¼í™©ì˜ ì›í˜• í•„ë¦„ì½”íŒ…ì •", "ì¹˜ì£¼ì¹˜ë£Œ íœ´ ì¹˜ì€ì—¼, ì¹˜ì£¼ì—¼ì˜ ë³´ì¡°ì¹˜ë£Œì¹˜ì£¼ì¹˜ë£Œ íœ´ ì¹˜ì€ì—¼, ì¹˜ì£¼ì—¼ì˜ ë³´ì¡°ì¹˜ë£Œ", "ìœ ë‹¹ë¶ˆë‚´ì¦ í™˜ìž ì£¼ì˜", "ë™êµ­ì œì•½", ('2022/07/19', 'YYYY/MM/DD'), 21000, 8),
-   ("ì´ê°€íƒ„ì—í”„ìº¡ìŠ", "file:/C:/MedApp/src/img/igatan.png", "ë¶„í™ìƒ‰ ê°€ë£¨ê°€ ë“  ë…¸ëž‘ì˜ ìž¥ë°©í˜• ê²½ì§ˆìº¡ìŠë¶„í™ìƒ‰ ê°€ë£¨ê°€ ë“  ë…¸ëž‘ì˜ ìž¥ë°©í˜• ê²½ì§ˆìº¡ìŠ", "ì¹˜ì£¼ì¹˜ë£Œ íœ´ ì¹˜ì€ì—¼, ì¹˜ì£¼ì—¼ì˜ ë³´ì¡°ì¹˜ë£Œ", "ì•Œë ˆë¥´ê¸° ì£¼ì˜", "ëª…ì¸ì œì•½", ('2022/06/09', 'YYYY/MM/DD'), 20000, 11),
-   ("ëžŒë…¸í”Œì•ŒíŒŒ", "file:/C:/MedApp/src/img/rhamnople.png", "í° ê°€ë£¨ê°€ ë“  ë°±ìƒ‰ì˜ ìº¡ìŠ", "ìœ ì‚°ê· ì¶©ì „", "1ì¼ 1íšŒ 1ìº¡ìŠ, ì•Œë ˆë¥´ê¸°ì£¼ì˜", "ì—˜ì•¤ë°”ì´ì˜¤ëž©", ('2021/03/16', 'YYYY/MM/DD'), 150000, 7),
-   ("ì‚ì½¤ì”¨", "file:/C:/MedApp/src/img/bcomc.jpg", "ë¶„í™ìƒ‰ì˜ íƒ€ì›í˜• í•„ë¦„ì½”íŒ…ì •", "B1, B2, B6, Cì˜ ë³´ê¸‰", "ì œì‚°ì œ ë³µìš© ì‹œ ë³µìš©ê¸ˆì§€", "1ì¼ 2íšŒ", ('2022/15/22', 'YYYY/MM/DD'), 28000, 20),
-   ("ë ˆëª¨ë‚˜ì‚°", "file:/C:/MedApp/src/img/lemona.jpg", "í™©ìƒ‰ì˜ ë¯¸ë¦½ìƒ ì‚°ì œ", "B2, B6, Cì˜ ë³´ê¸‰, ê¸°ë¯¸, ì£¼ê·¼ê¹¨ ì™„í™”", "1ì¼ 1íšŒ 1í¬", "ê²½ë‚¨ì œì•½ì£¼ì‹íšŒì‚¬", ('2021/01/20', 'YYYY/MM/DD'), 18000, 14),
+    ("Æ¼´«¹êµå", "file:/C:/MedApp/src/img/tinunband.png", "»ì»ö ¹êµå", "Æ¼´« Á¦°Å", "´ç´¢º´È¯ÀÚ »ç¿ë ±ÝÁö", "½Å½Å", TO_DATE('2020-12-20', 'YYYY/MM/DD'), 3500, 5);
+
+INSERT INTO Medicine
+    (name, image, character, effect, warning, company, expiration, price, stock) 
+VALUES 
+    ("Æ¼´«¹êµå", "file:/C:/MedApp/src/img/tinunband.png", "»ì»ö ¹êµå", "Æ¼´« Á¦°Å", "´ç´¢º´È¯ÀÚ »ç¿ë ±ÝÁö", "½Å½Å", TO_DATE('2020/12/20', 'YYYY/MM/DD'), 3500, 5),
+   ("ºñÆÇÅÙ", "file:/C:/MedApp/src/img/bepanthen.png", "ÇÏ¾á»ö ¿¬°í", "»óÃ³ ¹× ½ÀÁø Ä¡·á", "´« Á¢ÃË ÁÖÀÇ", "¹ÙÀÌ¿¤ÄÚ¸®¾Æ", ('2020/12/21', 'YYYY/MM/DD'), 8000, 6),
+   ("Çì¸ðÆ÷½º Á¤", "file:/C:/MedApp/src/img/hemaforce.png", "Àå¹æÇü °¥»ö", "Ã¶ °áÇÌ ¹× ºóÇ÷ ¿¹¹æ", "¾Ë·¹¸£±â ÁÖÀÇ", "Á¦ÀÌ´õºíÀ¯Áß¿ÜÁ¦¾àÁ¦ÀÌ´õºíÀ¯Áß¿ÜÁ¦¾à", ('2020/12/20', 'YYYY/MM/DD'), 20000, 7),
+   ("¸°´Ü·Î¿À¼ð", "file:/C:/MedApp/src/img/lindan.png", "¹é»öÀÇ ÇöÅ¹¼º ·Î¿À¼ðÁ¦", "¸Ó¸®ÀÌ °¨¿°Áõ", "ÀÓ»êºÎ ÁÖÀÇ", "½Å½Å", ('2020/12/24', 'YYYY/MM/DD'), 4000, 3),
+   ("µÎÇÇ¾Ø", "file:/C:/MedApp/src/img/dupi.png", "¾×Ã¼", "°¡·Á¿ò, ÇÇºÎ¿°", "1ÀÏ ¼öÈ¸ »ç¿ë", "ÇÑ¹Ì", ('2020/12/31', 'YYYY/MM/DD'), 3500, 4),
+   ("¶ó¹Ì½Ç", "file:/C:/MedApp/src/img/lamisil.png", "¹é»öÀÇ Å©¸²Á¦", "ÇÇºÎÁø±Õ°¨¿°ÁõÇÇºÎÁø±Õ°¨¿°Áõ", "1ÀÏ 1-2È¸, ¼Ò¾Æ »ç¿ëÁÖÀÇ", "±Û¶ô¼Ò½º¹Ì½ºÅ¬¶óÀÎÄÁ½´¸ÓÇï½ºÄÉ¾îÄÚ¸®¾Æ±Û¶ô¼Ò½º¹Ì½ºÅ¬¶óÀÎÄÁ½´¸ÓÇï½ºÄÉ¾îÄÚ¸®¾Æ", ('2020/12/20', 'YYYY/MM/DD'), 8000, 3),
+   ("ÀÌÁöÄÉ¾î³×ÀÏ¶óÄ«", "file:/C:/MedApp/src/img/easycare.png", "Åõ¸í¾×Ã¼", "Á¶°©Áø±ÕÁõ", "30ÃÊ °ÇÁ¶ ÈÄ 6½Ã°£ ¼¼Ã´±ÝÁö, 18¼¼ ¹Ì¸¸ ÁÖÀÇ", "À¯ÇÑ¾çÇà", ('2021/01/01', 'YYYY/MM/DD'), 10000, 10),
+   ("Å¸ÀÌ·¹³î", "file:/C:/MedApp/src/img/tylenol.png", "Èò»öÀÇ Á¤¹æÇü ÇÊ¸§ÄÚÆÃÁ¤", "ÇØ¿­, ÁøÅë, ¼Ò¿°Á¦", "¸¸12¼¼ ÀÌ»ó 1ÀÏ 3È¸", "ÇÑ±¹¾á¼¾", ('2021/02/20', 'YYYY/MM/DD'), 3000, 7),
+   ("¾Æ½ºÇÇ¸°", "file:/C:/MedApp/src/img/aspirin.png", "Èò»öÀÇ ¿øÇü ÇÊ¸§ÄÚÆÃÁ¤", "Ç÷Àü »ý¼º ¾ïÁ¦", "1ÀÏ 1È¸ 1Á¤, Ç÷¿ìº´ È¯ÀÚ »ç¿ë±ÝÁö", "ÇÑ¹Ì¾àÇ°", ('2021/02/18', 'YYYY/MM/DD'), 5000, 7),
+   ("·º¼¾¿¡½ºÁÂÁ¦", "file:/C:/MedApp/src/img/rexen.png", "Èò»öÀÇ Æ÷ÅºÇü ÁÂÁ¦", "Ä¡Áú Áõ»ó ¿ÏÈ­", "È¯ºÎ°¡ È­³óµÇ¾îÀÖ´Â È¯ÀÚ »ç¿ë ±ÝÁö", "ÇÑ¸²Á¦¾à", ('2021/03/15', 'YYYY/MM/DD'), 20000, 4),
+   ("ÅÍÄ¡¸Þµå", "file:/C:/MedApp/src/img/touchmed.png", "¿¯Àº Ã»»öÀÇ ¿¬°íÁ¦", "±¸³»¿°, ¼³¿°", "1ÀÏ 2-4È¸ È¯ºÎ¿¡ µµÆ÷, ¾Ë·¹¸£±âÁÖÀÇ", "µ¿È­¾àÇ°", ('2022/06/22', 'YYYY/MM/DD'), 5000, 4),
+   ("½ºÅä¸¶½Å", "file:/C:/MedApp/src/img/stomasin.png", "ÆÄ¶ûÀÇ Àå¹æÇü °æÁúÄ¸½¶", "Æíµµ¿° ¿ÏÈ­", "1È¸ 2Ä¸½¶, À¯´çºÒ³»Áõ È¯ÀÚ »ç¿ë±ÝÁö", "¾ÆÀÌ¿ùµåÁ¦¾à", ('2022/04/05', 'YYYY/MM/DD'), 8000, 3),
+   ("½ºÆ®·¾½ÇÇã´Ï¾Ø·¹¸ó", "file:/C:/MedApp/src/img/strepsils.png", "ÁÖÈ²»öÀÇ ¿øÇü Æ®·ÎÅ°Á¤", "È¿°ú\\ÀÎÈÄ¿° Áõ»ó ¿ÏÈ­", "1ÀÏ ÃÖ´ë 5°³ º¹¿ë", "¿Á½Ã·¹Å¶º¥Å°Àú", ('2022/03/20', 'YYYY/MM/DD'), 8000, 6),
+   ("Æú¸®µ§Æ®", "file:/C:/MedApp/src/img/pollydent.png", "¹ßÆ÷Á¤", "Æ²´Ï, ÀÇÄ¡ ¼¼Á¤, ¹æÃëÈ¿°ú", "»ïÅ°Áö ¸» °Í", "±Û¶ô¼Ò½º¹Ì½ºÅ¬¶óÀÎ", ('2022/02/01', 'YYYY/MM/DD'), 25000, 8),
+   ("ÄÚÅ¥ÅÙ11", "file:/C:/MedApp/src/img/coq10.png", "Àû»öÀÇ ¿¬ÁúÄ¸½¶", "Ç×»êÈ­¿Í Ç÷¾Ð°¨¼Òµµ¿ò", "1ÀÏ Ä¸½¶", "GNM", ('2022/09/10', 'YYYY/MM/DD'), 30000, 4),
+   ("Ã¨ÇÈ½º", "file:/C:/MedApp/src/img/champix.png", "¹é»öÀÇ Àå¹æÇü ÇÊ¸§ÄÚÆÃÁ¤¹é»öÀÇ Àå¹æÇü ÇÊ¸§ÄÚÆÃÁ¤", "±Ý¿¬Ä¡·áÀÇ º¸Á¶¿ä¹ý±Ý¿¬Ä¡·áÀÇ º¸Á¶¿ä¹ý", "ÀÚ»ì°æÇâ¼º ÁÖÀÇÀÚ»ì°æÇâ¼º ÁÖÀÇ", "È­ÀÌÀÚÈ­ÀÌÀÚ", ('2021/12/20', 'YYYY/MM/DD'), 15000, 8),
+   ("Æ¼´«¾×", "file:/C:/MedApp/src/img/tinun.png", "Åõ¸í¾×Ã¼", "Æ¼´«, ±»Àº»ì Á¦°Å", "2-5ÀÏ ÈÄ ±³Ã¼", "½Å½Å", ('2021/07/13', 'YYYY/MM/DD'), 2800, 3),
+   ("Å¬¸°Å¬°ü·ùÁ¦", "file:/C:/MedApp/src/img/cleancle.png", "¹«»öÅõ¸íÇÑ ¾×", "°ü·ù, Á¡¸·¼¼Á¤, °´´ã¹èÃâ ÃËÁø", "ÁÖ»çÁ¦·Î »ç¿ë±ÝÁö", "Á¦ÀÌ´õºíÀ¯»ý¸í°úÇÐ", ('2023/02/17', 'YYYY/MM/DD'), 1700, 3),
+   ("¿µÁø½ÖÈ­ÅÁ¾×", "file:/C:/MedApp/src/img/juice.png", "»ý¾àÀÇ ³¿»õ°¡³ª´Â °¥»öÀÇ ¾×Ã¼", "Çã¾àÃ¼Áú, ÇÇ·ÎÈ¸º¹, °ú·Î", "°íÇ÷¾ÐÈ¯ÀÚ ÁÖÀÇ, 1ÀÏ 3È¸", "ÇØÅÂ¿¡ÀÌÄ¡Æ¼ºñ", ('2020/12/22', 'YYYY/MM/DD'), 3700, 4),
+   ("·ÎÀÌµðÆæ", "file:/C:/MedApp/src/img/roidipen.png", "¿ÜÇü", "¼³»ç, ¹±Àº º¯, Ã¼ÇÔ, Åä»ç", "15¼¼ ÀÌ»ó, 1È¸2Ä¸½¶ 1ÀÏ 2È¸", "¹Ì·¡Á¦¾à", ('2020/12/23', 'YYYY/MM/DD'), 7000, 4),
+   ("½ºÅä¸¶Å¥", "file:/C:/MedApp/src/img/stomaq.png", "È²°¥»öÀÇ °ú¸³Á¦", "´ä´äÇÑ ¸íÄ¡, ½Å°æ°ú¹Î Áõ»ó ¿ÏÈ­", "1ÀÏ 3È¸, °íÇ÷¾Ð È¯ÀÚ ÁÖÀÇ", "°æ¹æ½Å¾à", ('2020/12/23', 'YYYY/MM/DD'), 4000, 4),
+   ("ºÎ½ºÄÚÆÇÇÃ·¯½ºÁ¤", "file:/C:/MedApp/src/img/buscopan.png", "¹é»öÀÇ Å¸¿øÇü ÇÊ¸§ÄÚÆÃÁ¤", "´ãµµ°è ±â´ÉÀå¾Ö ¹× °æ·Ã¼º µ¿Åë", "1ÀÏ 3È¸, ¼ú°ú ÇÔ²² º¹¿ë½Ã °£¼Õ»ó À¯¹ß", "»ç³ëÇÇ¾Æº¥Æ¼½ºÄÚ¸®¾Æ", ('2020/12/27', 'YYYY/MM/DD'), 7000, 6),
+   ("º¸¹Ì·Õ»ê", "file:/C:/MedApp/src/img/bomilong.png", "È²»öÀÇ »êÁ¦", "¸Ö¹Ì¿¡ ÀÇÇÑ ¾îÁö·¯¿ò, ±¸Åä, µÎÅëÀÇ ¿¹¹æ ¹× ¿ÏÈ­", "¼ºÀÎ: 1È¸ 1Æ÷,¼Ò¾Æ: 1È¸ 2/3Æ÷ ", "¿µÀÏÁ¦¾à", ('2020/12/31', 'YYYY/MM/DD'), 5000, 1),
+   ("¾î¸°ÀÌÅ°¹ÌÅ×ÆÐÃë", "file:/C:/MedApp/src/img/kimite.png", "¿¯Àº È²°¥»öÀÇ Æú¸®¿¡½ºÅ×¸£ÇÊ¸§¼ÒÀçÀÇ ¿øÇü ÆÐÃë", "¸Ö¹Ì¿¡ ÀÇÇÑ ±¸¿ª, ±¸ÅäÀÇ ¿¹¹æ", "7¼¼ ÀÌÇÏ »ç¿ë±ÝÁö", "¸í¹®Á¦¾à", ('2020/12/31', 'YYYY/MM/DD'), 18000, 7),
+   ("ÀÎ»çµ¹Á¤", "file:/C:/MedApp/src/img/insadol.png", "ÁÖÈ²ÀÇ ¿øÇü ÇÊ¸§ÄÚÆÃÁ¤", "Ä¡ÁÖÄ¡·á ÈÞ Ä¡Àº¿°, Ä¡ÁÖ¿°ÀÇ º¸Á¶Ä¡·áÄ¡ÁÖÄ¡·á ÈÞ Ä¡Àº¿°, Ä¡ÁÖ¿°ÀÇ º¸Á¶Ä¡·á", "À¯´çºÒ³»Áõ È¯ÀÚ ÁÖÀÇ", "µ¿±¹Á¦¾à", ('2022/07/19', 'YYYY/MM/DD'), 21000, 8),
+   ("ÀÌ°¡Åº¿¡ÇÁÄ¸½¶", "file:/C:/MedApp/src/img/igatan.png", "ºÐÈ«»ö °¡·ç°¡ µç ³ë¶ûÀÇ Àå¹æÇü °æÁúÄ¸½¶ºÐÈ«»ö °¡·ç°¡ µç ³ë¶ûÀÇ Àå¹æÇü °æÁúÄ¸½¶", "Ä¡ÁÖÄ¡·á ÈÞ Ä¡Àº¿°, Ä¡ÁÖ¿°ÀÇ º¸Á¶Ä¡·á", "¾Ë·¹¸£±â ÁÖÀÇ", "¸íÀÎÁ¦¾à", ('2022/06/09', 'YYYY/MM/DD'), 20000, 11),
+   ("¶÷³ëÇÃ¾ËÆÄ", "file:/C:/MedApp/src/img/rhamnople.png", "Èò °¡·ç°¡ µç ¹é»öÀÇ Ä¸½¶", "À¯»ê±ÕÃæÀü", "1ÀÏ 1È¸ 1Ä¸½¶, ¾Ë·¹¸£±âÁÖÀÇ", "¿¤¾Ø¹ÙÀÌ¿À·¦", ('2021/03/16', 'YYYY/MM/DD'), 150000, 7),
+   ("»ßÄÞ¾¾", "file:/C:/MedApp/src/img/bcomc.jpg", "ºÐÈ«»öÀÇ Å¸¿øÇü ÇÊ¸§ÄÚÆÃÁ¤", "B1, B2, B6, CÀÇ º¸±Þ", "Á¦»êÁ¦ º¹¿ë ½Ã º¹¿ë±ÝÁö", "1ÀÏ 2È¸", ('2022/15/22', 'YYYY/MM/DD'), 28000, 20),
+   ("·¹¸ð³ª»ê", "file:/C:/MedApp/src/img/lemona.jpg", "È²»öÀÇ ¹Ì¸³»ó »êÁ¦", "B2, B6, CÀÇ º¸±Þ, ±â¹Ì, ÁÖ±Ù±ú ¿ÏÈ­", "1ÀÏ 1È¸ 1Æ÷", "°æ³²Á¦¾àÁÖ½ÄÈ¸»ç", ('2021/01/20', 'YYYY/MM/DD'), 18000, 14),
    ;
-   
+
+CREATE TABLE userdata (
+    name VARCHAR2(1000) NOT NULL,
+    id VARCHAR2(1000) NOT NULL,
+    password VARCHAR2(1000) NOT NULL,
+    permit VARCHAR2(1000) NOT NULL,
+    PRIMARY KEY (id));
+
+INSERT INTO userdata(name, id, password, permit) Values ('°ü¸®ÀÚ', 'manager', '0000', '°ü¸®ÀÚ');
+
    CREATE TABLE Maskstock
 (
     KFType      VARCHAR2(20)    NOT NULL, 
@@ -90,28 +104,3 @@ INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-94', '97122512
 INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-90', '9712251234567', 1);
 INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-80', '9712251234567', 1);
 INSERT INTO BuyingMask (KFType2, RRnumber, available) VALUES ('KF-AD', '9712251234567', 1);
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
