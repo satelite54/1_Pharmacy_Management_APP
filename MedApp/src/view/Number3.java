@@ -140,16 +140,16 @@ public class Number3 implements Initializable {
 		}
 		});
 
-//    	add1.setOnMouseClicked( evnet -> {
-//    		Stage stage = new Stage();
-//    		String FXMLRout = "../view/HomePage.fxml";
-//    		try {
-//    			page.CreatePage(stage, FXMLRout);
-//    		} catch (IOException e) {
-//    			// TODO Auto-generated catch block
-//    			e.printStackTrace();
-//    		}
-//    	});
+    	add1.setOnMouseClicked( evnet -> {
+    		Stage stage = new Stage();
+    		String FXMLRout = "../view/HomePage.fxml";
+    		try {
+    			page.CreatePage(stage, FXMLRout);
+    		} catch (IOException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
+    	});
 
     	SearchListBox.setOnMouseClicked ((MouseEvent) -> {
     		if(MouseEvent.getClickCount() == 2) {

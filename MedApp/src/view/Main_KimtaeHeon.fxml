@@ -62,5 +62,15 @@
       </ImageView>
       <Label fx:id="ManagerOrViewer" layoutX="17.0" layoutY="54.0" prefHeight="22.0" prefWidth="175.0" />
       <ListView fx:id="SearchListBox" layoutX="448.0" layoutY="275.0" prefHeight="78.0" prefWidth="425.0" style="-fx-background-color: #ebecf1;" />
+      <ImageView fx:id="add1" fitHeight="84.0" fitWidth="47.0" layoutX="1037.0" layoutY="877.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Cloud.PNG" />
+         </image>
+      </ImageView>
+      <Text fx:id="UserDelete" fill="#206a5d" layoutX="1001.0" layoutY="986.0" strokeType="OUTSIDE" strokeWidth="0.0" text="사용자 변경" textAlignment="CENTER" wrappingWidth="120.0">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
