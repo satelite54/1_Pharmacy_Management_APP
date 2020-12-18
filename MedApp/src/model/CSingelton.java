@@ -19,6 +19,7 @@ public class CSingelton {
 	// 2020 12 11 ±èÅÂÇå
 
 	public static ArrayList<String> AryList = new ArrayList<>();
+	public static ArrayList<String> AryList2 = new ArrayList<>();
 	public static CSingelton getInstance() {
 		if(printer == null) {
 

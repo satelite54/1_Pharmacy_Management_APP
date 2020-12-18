@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -20,6 +21,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.DBConnect;
@@ -67,6 +70,9 @@ public class CatalogController implements Initializable {
     @FXML
     private Label label1;
 
+    @FXML
+    private ImageView imgCatal;
+
 	// Event Listener on Button[#goExpirition].onAction
     @FXML
     void Exit(ActionEvent event) {
@@ -93,6 +99,13 @@ public class CatalogController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		tbCatalog.setOnMouseClicked(new EventHandler<MouseEvent>() {
+		    @Override
+		    public void handle(MouseEvent event) {
+		    	imgCatal.setImage(new Image(mov.AryList2.get(tbCatalog.getSelectionModel().getSelectedIndex())));
+		    }
+		  });
+
 		if(mov.getManagerOrViewer() == 1) {
 			ManagerOrViewer.setText("로그인 정보 : 관리자");
 		}
@@ -120,8 +133,10 @@ public class CatalogController implements Initializable {
 			stmt = connect.createStatement(); // 쿼리 객체 생성. CONN 에서 연결만 후 createStatement 에서 생성해준 후 //
 			rs = stmt.executeQuery(sql); // 접속 된 DB에서 쿼리를 실행하고 결과를 리턴 //
 			// 결과를 한 행식 읽어서 bookList 에서 입력
+
 			Medicine medicine;
 			while (rs.next()) {
+				mov.AryList2.add(rs.getString("image"));
 				medicine = new Medicine(rs.getString("name"), rs.getString("image"), rs.getString("character"),
 						rs.getString("effect"), rs.getString("warning"), rs.getString("company"),
 						rs.getDate("expiration"), rs.getInt("price"), rs.getInt("stock")); // DB 의 북스테이블에 있는 열이름
@@ -149,7 +164,6 @@ public class CatalogController implements Initializable {
 		tbexpirition.setCellValueFactory(new PropertyValueFactory<Medicine, Date>("expiration"));
 		tbprice.setCellValueFactory(new PropertyValueFactory<Medicine, Integer>("price"));
 		tbstock.setCellValueFactory(new PropertyValueFactory<Medicine, Integer>("stock"));
-
 	}
 
 	@FXML
