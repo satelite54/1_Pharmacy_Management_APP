@@ -8,8 +8,8 @@ import java.sql.Statement;
 
 public class DBConnect {
 	private final String URL = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
-	private final String USER = "scott";
-	private final String PASSWRORD = "tiger";
+	private final String USER = "root";
+	private final String PASSWRORD = "1234";
 
 	Connection conn = null;
 
