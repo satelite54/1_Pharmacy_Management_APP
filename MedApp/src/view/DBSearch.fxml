@@ -41,7 +41,7 @@
             <Image url="@../img/3Dlogo(hires).gif" />
          </image>
       </ImageView>
-      <Label fx:id="ManagerOrViewer" layoutX="17.0" layoutY="54.0" prefHeight="22.0" prefWidth="175.0" />
+      <Label fx:id="ManagerOrViewer" layoutX="17.0" layoutY="170.0" prefHeight="22.0" prefWidth="175.0" />
       <Label layoutX="555.0" layoutY="76.0" text="DB검색" textFill="#206a5d">
          <font>
             <Font name="System Bold" size="50.0" />

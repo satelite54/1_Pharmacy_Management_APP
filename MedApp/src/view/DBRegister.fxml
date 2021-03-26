@@ -123,6 +123,6 @@
             <Image url="@../img/3Dlogo(hires).gif" />
          </image>
       </ImageView>
-      <Label fx:id="mov" layoutX="17.0" layoutY="54.0" prefHeight="25.0" prefWidth="167.0" />
+      <Label fx:id="mov" layoutX="17.0" layoutY="170" prefHeight="25.0" prefWidth="167.0" />
    </children>
 </AnchorPane>
