@@ -3,7 +3,6 @@ package model;
 import java.sql.Connection;
 import java.util.ArrayList;
 
-import javafx.scene.image.Image;
 import model.DBConnect;
 
 public class CSingelton {

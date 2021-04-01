@@ -47,6 +47,6 @@
             <Font name="System Bold" size="50.0" />
          </font>
       </Label>
-      <ImageView fx:id="Searchimg" fitHeight="214.0" fitWidth="329.0" layoutX="38.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Searchimg" fitHeight="214.0" fitWidth="329.0" layoutX="950.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

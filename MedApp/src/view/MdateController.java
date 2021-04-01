@@ -39,7 +39,8 @@ private Label ManagerOrViewer;
 
  public ObservableList<Medicine> getMedicineList(){
 		ObservableList<Medicine> medicineList = FXCollections.observableArrayList();
-		String sql = "SELECT name,(expiration) FROM medicine m where m.expiration < sysdate+10 minus select name,expiration from medicine where sysdate > expiration";
+		String sql = "SELECT name,(expiration) FROM medicine m where m.expiration < sysdate+10 minus"
+				+ " " + "select name,expiration from medicine where sysdate > expiration";
 
 
 		Statement stmt;

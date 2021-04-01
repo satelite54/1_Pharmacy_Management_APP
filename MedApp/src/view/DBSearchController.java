@@ -141,10 +141,8 @@ public class DBSearchController implements Initializable {
     private void MedicineTableSet(String text) {
     	data = MedDao.searchByName(text);
 
-
-
     	colName.setCellValueFactory(new PropertyValueFactory<Medicine, String>("name"));
-//    	imageCol.setCellValueFactory(new PropertyValueFactory<Medicine, ImageView>("image"));
+    	imageCol.setCellValueFactory(new PropertyValueFactory<Medicine, ImageView>("image"));
     	colCharacter.setCellValueFactory(new PropertyValueFactory<Medicine, String>("character"));
     	colEffect.setCellValueFactory(new PropertyValueFactory<Medicine, String>("effect"));
     	colWarning.setCellValueFactory(new PropertyValueFactory<Medicine, String>("warning"));
